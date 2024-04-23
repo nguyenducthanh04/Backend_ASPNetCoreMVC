@@ -1,0 +1,64 @@
+﻿@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/Shared/_LayoutAdmin.cshtml";
+}
+@model List<WebThanhCode.Models.Product>
+<a href="/Product/Create">Thêm mới</a>
+<br /><br />
+<div class="container">
+    <table class="table table-bordered">
+        <thead>
+            <tr>
+                <th>Mã sản phẩm</th>
+                <th>Tên</th>
+                <th>Giá</th>
+                <th>Kiểu</th>
+                <th>Màu sắc</th>
+                <th>Size</th>
+                <th>Số lượng</th>
+                <th>Mô tả</th>
+                <th>Đã bán</th>
+                <th>Loại danh mục</th>
+                <th>Chi tiết</th>
+                <th>Edit</th>
+                <th>Delete</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var item in Model)
+            {
+                <tr>
+                    <td>@item.ProductId</td>
+                    <td>@item.ProductName</td>
+                    <td>@item.Price</td>
+                    <td>@item.Type</td>
+                    <td>@item.Color</td>
+                    <td>@item.Size</td>
+                    <td>@item.Quantity</td>
+                    <td>@item.Description</td>
+                    <td>@item.Saled</td>
+                    <td>
+                        @{
+                            ShopTheThaoContext context = new ShopTheThaoContext();
+                            var loai = context.Categories.Find(item.CategoryId);
+                            if(loai != null)
+                            {
+                                <span>@loai.CategoryName</span>
+                            }
+                        }
+                    </td>
+                    <td>
+                        <a href="/detail/@item.ProductId" class="btn btn-primary">Details</a>
+                    </td>
+                    <td>
+                        <a href="/edit-product/@item.ProductId" class="btn btn-warning">Edit</a>
+                    </td>
+                    <td>
+                        <a href="/delete-prd/@item.ProductId" class="btn btn-danger" onclick="return confirm(" Bạn có chắc chắn?")">Xóa</a>
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+</div>
+

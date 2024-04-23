@@ -1,0 +1,49 @@
+/* _content/Admin_Sport/Views/Shared/_Layout.cshtml.rz.scp.css */
+/* Please see documentation at https://docs.microsoft.com/aspnet/core/client-side/bundling-and-minification
+for details on configuring this project to bundle and minify static web assets. */
+
+a.navbar-brand[b-yfd4kmheec] {
+  white-space: normal;
+  text-align: center;
+  word-break: break-all;
+}
+
+a[b-yfd4kmheec] {
+  color: #0077cc;
+}
+
+.btn-primary[b-yfd4kmheec] {
+  color: #fff;
+  background-color: #1b6ec2;
+  border-color: #1861ac;
+}
+
+.nav-pills .nav-link.active[b-yfd4kmheec], .nav-pills .show > .nav-link[b-yfd4kmheec] {
+  color: #fff;
+  background-color: #1b6ec2;
+  border-color: #1861ac;
+}
+
+.border-top[b-yfd4kmheec] {
+  border-top: 1px solid #e5e5e5;
+}
+.border-bottom[b-yfd4kmheec] {
+  border-bottom: 1px solid #e5e5e5;
+}
+
+.box-shadow[b-yfd4kmheec] {
+  box-shadow: 0 .25rem .75rem rgba(0, 0, 0, .05);
+}
+
+button.accept-policy[b-yfd4kmheec] {
+  font-size: 1rem;
+  line-height: inherit;
+}
+
+.footer[b-yfd4kmheec] {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  white-space: nowrap;
+  line-height: 60px;
+}

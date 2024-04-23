@@ -1,0 +1,54 @@
+﻿@model Admin_Sport.Models.Products
+@{
+    ViewData["Title"] = "Create";
+}
+
+<h3 style="margin-bottom: 30px">Thêm mới phòng ban</h3>
+<div class="container col-md-8 offset-1-md-2">
+    <form action="/Product/Create" method="post">
+        <div class="mb-3">
+            <label asp-for="Name">Tên sản phẩm</label>
+            <input asp-for="Name" placeholder="Tên sản phẩm" class="form-control" />
+        </div>
+        <div class="mb-3">
+            <label asp-for="Price">Giá sản phẩm</label>
+            <input asp-for="Price" placeholder="Giá sản phẩm" class="form-control" />
+        </div>
+        <div class="mb-3">
+            <label asp-for="Type">Type sản phẩm</label>
+            <input asp-for="Type" placeholder="Type sản phẩm" class="form-control" />
+        </div>
+        <div class="mb-3">
+            <label asp-for="Color">Màu sản phẩm</label>
+            <input asp-for="Color" placeholder="Màu sản phẩm" class="form-control" />
+        </div>
+        <div class="mb-3">
+            <label asp-for="Size">Size sản phẩm</label>
+            <input asp-for="Size" placeholder="Size sản phẩm" class="form-control" />
+        </div>
+        <div class="mb-3">
+            <label asp-for="Quantity">Số lượng sản phẩm</label>
+            <input asp-for="Quantity" placeholder="Số lượng sản phẩm" class="form-control" />
+        </div>
+        <div class="mb-3">
+            <label asp-for="Saled">Số lượng sản phẩm đã bán</label>
+            <input asp-for="Saled" placeholder="Số lượng sản phẩm đã bán" class="form-control" />
+        </div>
+        <div class="mb-3">
+            <label asp-for="Description">Mô tả sản phẩm</label>
+            <input asp-for="Description" placeholder="Mô tả sản phẩm" class="form-control" />
+        </div>
+        <div class="mb-3">
+            <label asp-for="DateSubmitted">Ngày đăng sản phẩm</label>
+            <input asp-for="DateSubmitted" type="date" placeholder="Ngày đăng sản phẩm" class="form-control" />
+        </div>
+        <div class="mb-3">
+            <label asp-for="CategoryId">CategoryId</label>
+            <input asp-for="CategoryId" placeholder="CategoryId" class="form-control" />
+        </div>
+        <div class="mb-3">
+            <input type="submit" value="Thêm" class="btn btn-primary">
+        </div>
+</form>
+</div>
+

@@ -1,0 +1,28 @@
+﻿@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/Shared/MasterAdmin.cshtml";
+
+}
+@model List<Admin_Sport.Models.Categories>
+<div class="container">
+    <a href="/Category/Create" class="btn btn-success mb-3">Thêm mới</a>
+    <table class="table table-bordered">
+        <thead>
+            <tr>
+                <th>MÃ Sp</th>
+                <th>TÊN Sp</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var item in Model)
+            {
+                <tr>
+                    <td>@item.CategoryId</td>
+                    <td>@item.Name</td>
+                </tr>
+            }
+        </tbody>
+    </table>
+</div>
+
+

@@ -1,0 +1,56 @@
+﻿@model WebThanhCode.Models.Product
+@{
+    ViewData["Title"] = "Create";
+    Layout = "~/Views/Shared/_LayoutAdmin.cshtml";
+    ShopTheThaoContext context = new ShopTheThaoContext();
+
+}
+<h5 style="margin-bottom: 30px;">Thêm mới sản phẩm</h5>
+<div class="container">
+    <form asp-action="Create" method="post">
+        <div class="mb-3">
+            @* <label asp-for="ProductName">Ten</label> *@
+            <input asp-for="ProductName" placeholder="Tên sản phẩm" class="form-control" />
+        </div>
+        <div class="mb-3">
+            @* <label asp-for="Price">Gia</label> *@
+            <input asp-for="Price" placeholder="Giá" class="form-control" />
+        </div>
+        <div class="mb-3">
+            @* <label asp-for="Type">Kieu</label> *@
+            <input asp-for="Type" placeholder="Kiểu sản phẩm" class="form-control" />
+        </div>
+        <div class="mb-3">
+            @* <label asp-for="Color">Mau</label> *@
+            <input asp-for="Color" placeholder="Màu" class="form-control" />
+        </div>
+        <div class="mb-3">
+            @* <label asp-for="Size">Size</label> *@
+            <input asp-for="Size" placeholder="Size" class="form-control" />
+        </div>
+        <div class="mb-3">
+            @* <label asp-for="Description">Mo ta</label> *@
+            <input asp-for="Description" placeholder="Mô tả" class="form-control" />
+        </div>
+        <div class="mb-3">
+            @* <label asp-for="Quantity">So luong</label> *@
+            <input asp-for="Quantity" placeholder="Số lượng" class="form-control" />
+        </div>
+        <div class="mb-3">
+            @* <label asp-for="Saled">Da ban</label> *@
+            <input asp-for="Saled" placeholder="Đã bán" class="form-control" />
+        </div>
+        <div class="mb-3">
+            <label asp-for="CategoryId">Loai</label>
+            <select class="form-control" name="CategoryId">
+                @foreach (var cate in context.Categories.ToList())
+                {
+                    <option value="@cate.CategoryId">@cate.CategoryName</option>
+                }
+            </select>
+        </div>
+        <div class="mb-3">
+            <button type="submit" class="btn btn-primary">Thêm mới</button>
+        </div>
+    </form>
+</div>

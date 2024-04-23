@@ -1,0 +1,52 @@
+﻿@model WebThanhCode.Models.Image
+
+@{
+    ViewData["Title"] = "AddImage";
+    var idString = ViewContext.RouteData.Values["id"]?.ToString();
+    int id;
+}
+
+<h1>AddImage</h1>
+
+<h4>Image</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-controller="Product" asp-action="AddRelatedPhoto" method="post" enctype="multipart/form-data">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="Image1" class="control-label"></label>
+                <input type="file" name="ImageFile" />
+                <span asp-validation-for="Image1" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Main" class="control-label"></label>
+                <input asp-for="Main" value="2" class="form-control" />
+                <span asp-validation-for="Main" class="text-danger"></span>
+            </div>
+            @{
+                if (int.TryParse(idString, out id))
+                {
+                    <div class="form-group">
+                        <label asp-for="ProductId" class="control-label"></label>
+                        <input asp-for="ProductId" value="@id" class="form-control" />
+                        <span asp-validation-for="ProductId" class="text-danger"></span>
+                    </div>
+                }
+            }
+            <div class="form-group">
+                <input type="submit" value="Create" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>
+
+@section Scripts {
+    @{
+        await Html.RenderPartialAsync("_ValidationScriptsPartial");
+    }
+}

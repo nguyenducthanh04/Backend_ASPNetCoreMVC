@@ -1,0 +1,54 @@
+﻿@{
+    ViewData["Title"] = "Index";
+}
+@model List<WebByThanhNguyen.Models.Products>
+<div class="container">
+    <a href="/Product/Create" class="btn btn-success mb-3">Thêm mới</a>
+    <table class="table table-bordered">
+        <thead>
+            <tr>
+                <th>Mã sản phẩm</th>
+                <th>Tên</th>
+                <th>Giá</th>
+                <th>Kiểu</th>
+                <th>Màu sắc</th>
+                <th>Size</th>
+                <th>Số lượng</th>
+                <th>Mô tả</th>
+                <th>Đã bán</th>
+                <th>Loại danh mục</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var item in Model)
+            {
+                <tr>
+                    <td>@item.ProductId</td>
+                    <td>@item.ProductName</td>
+                    <td>@item.Price</td>
+                    <td>@item.TypeName</td>
+                    <td>@item.Color</td>
+                    <td>@item.Size</td>
+                    <td>@item.Quantity</td>
+                    <td>@item.Description</td>
+                    <td>@item.Saled</td>
+                    <td>
+                        
+                            @{
+    // Inject DbContext
+    var dbContext = Context.RequestServices.GetService(typeof(WebShopContext)) as WebShopContext;
+
+    // Lấy sản phẩm có ProductId là 1
+    var product = dbContext.Categories.Find(1);
+                            if (product != null)
+                            {
+                                <span>@product.CategoryName</span>
+                            }
+};
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+</div>
+

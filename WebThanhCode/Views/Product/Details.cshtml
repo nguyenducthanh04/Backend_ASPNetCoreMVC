@@ -1,0 +1,105 @@
+﻿@model WebThanhCode.Models.Product
+
+@{
+    Layout = "~/Views/Shared/_LayoutAdmin.cshtml";
+    ShopTheThaoContext context = new ShopTheThaoContext();
+    var idString = ViewContext.RouteData.Values["id"]?.ToString();
+    int id;
+}
+<div>
+    <h3 style="text-align: center; margin-bottom: 30px">Chi tiết sản phầm</h3>
+    <div class="container">
+        <div style="margin-bottom: 14px" class="col-sm-10">
+            <strong>Id:</strong><span>@Model.ProductId</span>
+        </div>
+        <div style="margin-bottom: 14px" class="col-sm-10">
+            <strong>
+                Tên sản phẩm:
+            </strong><span>
+                @Model.ProductName
+            </span>
+        </div>
+        <div style="margin-bottom: 14px" class="col-sm-10">
+            <strong>
+                Giá:
+            </strong><span>
+                @Model.Price
+            </span>
+        </div>
+        <div style="margin-bottom: 14px" class="col-sm-10">
+            <strong>
+                Kiểu:
+            </strong><span>
+                @Model.Type
+            </span>
+        </div>
+        <div style="margin-bottom: 14px" class="col-sm-10">
+            <strong>
+                Màu:
+            </strong><span>
+                @Model.Color
+            </span>
+        </div>
+        <div style="margin-bottom: 14px" class="col-sm-10">
+            <strong>
+                Size:
+            </strong><span>
+                @Model.Size
+            </span>
+        </div>
+        <div style="margin-bottom: 14px" class="col-sm-10">
+            <strong>
+                Số lượng:
+            </strong><span>
+                @Model.Quantity
+            </span>
+        </div>
+        <div style="margin-bottom: 14px" class="col-sm-10">
+            <strong>
+                Mô tả:
+            </strong><span>
+                @Model.Description
+            </span>
+        </div>
+        <div style="margin-bottom: 14px" class="col-sm-10">
+            <strong>
+                Đã bán:
+            </strong><span>
+                @Model.Saled
+            </span>
+        </div>
+    </div>
+    <div style="margin-bottom: 14px; margin-left: 8px" class="col-sm-10">
+        <strong>Hình ảnh sản phẩm:</strong>
+        </div>
+
+    <div style="margin-bottom: 14px" class="col-sm-10">
+            @{
+                  if (int.TryParse(idString, out id))
+            {
+                        var productId = id;
+                        var images = context.Images.Where(i => i.ProductId == productId).ToList();
+                        if (images != null && images.Any())
+                        {
+                            foreach (var image in images)
+                            {
+                                <img src="@Url.Content(image.Image1)" class="img-thumbnail" alt="Product Image" style="width: 300px; height: 300px" /><br />
+                            <a href="/edit-image/@image.ImageId">Edit</a>
+
+                            <br />
+                            }
+                        }
+                        else
+                        {
+                            <p>No images available</p>
+                        }
+            }
+          }
+        </div>
+    </div>
+<div>
+    <a href="/add-image/@Model.ProductId">Thêm hình ảnh</a> |
+    <a asp-action="Index">Back to List</a>
+</div>
+</div>
+

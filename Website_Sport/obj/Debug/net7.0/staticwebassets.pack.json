@@ -1,0 +1,545 @@
+{
+  "Files": [
+    {
+      "Id": "C:\\C#_CNTT_1605\\Website_Sport\\Website_Sport\\obj\\Debug\\net7.0\\scopedcss\\projectbundle\\Website_Sport.bundle.scp.css",
+      "PackagePath": "staticwebassets\\Website_Sport.bundle.scp.css"
+    },
+    {
+      "Id": "C:\\C#_CNTT_1605\\Website_Sport\\Website_Sport\\wwwroot\\MasterLayout\\images\\adidas.png",
+      "PackagePath": "staticwebassets\\MasterLayout\\images\\adidas.png"
+    },
+    {
+      "Id": "C:\\C#_CNTT_1605\\Website_Sport\\Website_Sport\\wwwroot\\MasterLayout\\images\\adidas2.jpg",
+      "PackagePath": "staticwebassets\\MasterLayout\\images\\adidas2.jpg"
+    },
+    {
+      "Id": "C:\\C#_CNTT_1605\\Website_Sport\\Website_Sport\\wwwroot\\MasterLayout\\images\\app-store.png",
+      "PackagePath": "staticwebassets\\MasterLayout\\images\\app-store.png"
+    },
+    {
+      "Id": "C:\\C#_CNTT_1605\\Website_Sport\\Website_Sport\\wwwroot\\MasterLayout\\images\\buy-1.jpg",
+      "PackagePath": "staticwebassets\\MasterLayout\\images\\buy-1.jpg"
+    },
+    {
+      "Id": "C:\\C#_CNTT_1605\\Website_Sport\\Website_Sport\\wwwroot\\MasterLayout\\images\\buy-2.jpg",
+      "PackagePath": "staticwebassets\\MasterLayout\\images\\buy-2.jpg"
+    },
+    {
+      "Id": "C:\\C#_CNTT_1605\\Website_Sport\\Website_Sport\\wwwroot\\MasterLayout\\images\\buy-3.jpg",
+      "PackagePath": "staticwebassets\\MasterLayout\\images\\buy-3.jpg"
+    },
+    {
+      "Id": "C:\\C#_CNTT_1605\\Website_Sport\\Website_Sport\\wwwroot\\MasterLayout\\images\\cart.png",
+      "PackagePath": "staticwebassets\\MasterLayout\\images\\cart.png"
+    },
+    {
+      "Id": "C:\\C#_CNTT_1605\\Website_Sport\\Website_Sport\\wwwroot\\MasterLayout\\images\\category-1.jpg",
+      "PackagePath": "staticwebassets\\MasterLayout\\images\\category-1.jpg"
+    },
+    {
+      "Id": "C:\\C#_CNTT_1605\\Website_Sport\\Website_Sport\\wwwroot\\MasterLayout\\images\\category-2.jpg",
+      "PackagePath": "staticwebassets\\MasterLayout\\images\\category-2.jpg"
+    },
+    {
+      "Id": "C:\\C#_CNTT_1605\\Website_Sport\\Website_Sport\\wwwroot\\MasterLayout\\images\\category-3.jpg",
+      "PackagePath": "staticwebassets\\MasterLayout\\images\\category-3.jpg"
+    },
+    {
+      "Id": "C:\\C#_CNTT_1605\\Website_Sport\\Website_Sport\\wwwroot\\MasterLayout\\images\\exclusive.png",
+      "PackagePath": "staticwebassets\\MasterLayout\\images\\exclusive.png"
+    },
+    {
+      "Id": "C:\\C#_CNTT_1605\\Website_Sport\\Website_Sport\\wwwroot\\MasterLayout\\images\\gallery-1.jpg",
+      "PackagePath": "staticwebassets\\MasterLayout\\images\\gallery-1.jpg"
+    },
+    {
+      "Id": "C:\\C#_CNTT_1605\\Website_Sport\\Website_Sport\\wwwroot\\MasterLayout\\images\\gallery-2.jpg",
+      "PackagePath": "staticwebassets\\MasterLayout\\images\\gallery-2.jpg"
+    },
+    {
+      "Id": "C:\\C#_CNTT_1605\\Website_Sport\\Website_Sport\\wwwroot\\MasterLayout\\images\\gallery-3.jpg",
+      "PackagePath": "staticwebassets\\MasterLayout\\images\\gallery-3.jpg"
+    },
+    {
+      "Id": "C:\\C#_CNTT_1605\\Website_Sport\\Website_Sport\\wwwroot\\MasterLayout\\images\\gallery-4.jpg",
+      "PackagePath": "staticwebassets\\MasterLayout\\images\\gallery-4.jpg"
+    },
+    {
+      "Id": "C:\\C#_CNTT_1605\\Website_Sport\\Website_Sport\\wwwroot\\MasterLayout\\images\\image1.png",
+      "PackagePath": "staticwebassets\\MasterLayout\\images\\image1.png"
+    },
+    {
+      "Id": "C:\\C#_CNTT_1605\\Website_Sport\\Website_Sport\\wwwroot\\MasterLayout\\images\\img-credit.txt",
+      "PackagePath": "staticwebassets\\MasterLayout\\images\\img-credit.txt"
+    },
+    {
+      "Id": "C:\\C#_CNTT_1605\\Website_Sport\\Website_Sport\\wwwroot\\MasterLayout\\images\\logo-coca-cola.png",
+      "PackagePath": "staticwebassets\\MasterLayout\\images\\logo-coca-cola.png"
+    },
+    {
+      "Id": "C:\\C#_CNTT_1605\\Website_Sport\\Website_Sport\\wwwroot\\MasterLayout\\images\\logo-godrej.png",
+      "PackagePath": "staticwebassets\\MasterLayout\\images\\logo-godrej.png"
+    },
+    {
+      "Id": "C:\\C#_CNTT_1605\\Website_Sport\\Website_Sport\\wwwroot\\MasterLayout\\images\\logo-oppo.png",
+      "PackagePath": "staticwebassets\\MasterLayout\\images\\logo-oppo.png"
+    },
+    {
+      "Id": "C:\\C#_CNTT_1605\\Website_Sport\\Website_Sport\\wwwroot\\MasterLayout\\images\\logo-paypal.png",
+      "PackagePath": "staticwebassets\\MasterLayout\\images\\logo-paypal.png"
+    },
+    {
+      "Id": "C:\\C#_CNTT_1605\\Website_Sport\\Website_Sport\\wwwroot\\MasterLayout\\images\\logo-philips.png",
+      "PackagePath": "staticwebassets\\MasterLayout\\images\\logo-philips.png"
+    },
+    {
+      "Id": "C:\\C#_CNTT_1605\\Website_Sport\\Website_Sport\\wwwroot\\MasterLayout\\images\\logo-white.png",
+      "PackagePath": "staticwebassets\\MasterLayout\\images\\logo-white.png"
+    },
+    {
+      "Id": "C:\\C#_CNTT_1605\\Website_Sport\\Website_Sport\\wwwroot\\MasterLayout\\images\\logo.png",
+      "PackagePath": "staticwebassets\\MasterLayout\\images\\logo.png"
+    },
+    {
+      "Id": "C:\\C#_CNTT_1605\\Website_Sport\\Website_Sport\\wwwroot\\MasterLayout\\images\\menu.png",
+      "PackagePath": "staticwebassets\\MasterLayout\\images\\menu.png"
+    },
+    {
+      "Id": "C:\\C#_CNTT_1605\\Website_Sport\\Website_Sport\\wwwroot\\MasterLayout\\images\\play-store.png",
+      "PackagePath": "staticwebassets\\MasterLayout\\images\\play-store.png"
+    },
+    {
+      "Id": "C:\\C#_CNTT_1605\\Website_Sport\\Website_Sport\\wwwroot\\MasterLayout\\images\\product-1.jpg",
+      "PackagePath": "staticwebassets\\MasterLayout\\images\\product-1.jpg"
+    },
+    {
+      "Id": "C:\\C#_CNTT_1605\\Website_Sport\\Website_Sport\\wwwroot\\MasterLayout\\images\\product-10.jpg",
+      "PackagePath": "staticwebassets\\MasterLayout\\images\\product-10.jpg"
+    },
+    {
+      "Id": "C:\\C#_CNTT_1605\\Website_Sport\\Website_Sport\\wwwroot\\MasterLayout\\images\\product-11.jpg",
+      "PackagePath": "staticwebassets\\MasterLayout\\images\\product-11.jpg"
+    },
+    {
+      "Id": "C:\\C#_CNTT_1605\\Website_Sport\\Website_Sport\\wwwroot\\MasterLayout\\images\\product-12.jpg",
+      "PackagePath": "staticwebassets\\MasterLayout\\images\\product-12.jpg"
+    },
+    {
+      "Id": "C:\\C#_CNTT_1605\\Website_Sport\\Website_Sport\\wwwroot\\MasterLayout\\images\\product-2.jpg",
+      "PackagePath": "staticwebassets\\MasterLayout\\images\\product-2.jpg"
+    },
+    {
+      "Id": "C:\\C#_CNTT_1605\\Website_Sport\\Website_Sport\\wwwroot\\MasterLayout\\images\\product-3.jpg",
+      "PackagePath": "staticwebassets\\MasterLayout\\images\\product-3.jpg"
+    },
+    {
+      "Id": "C:\\C#_CNTT_1605\\Website_Sport\\Website_Sport\\wwwroot\\MasterLayout\\images\\product-4.jpg",
+      "PackagePath": "staticwebassets\\MasterLayout\\images\\product-4.jpg"
+    },
+    {
+      "Id": "C:\\C#_CNTT_1605\\Website_Sport\\Website_Sport\\wwwroot\\MasterLayout\\images\\product-5.jpg",
+      "PackagePath": "staticwebassets\\MasterLayout\\images\\product-5.jpg"
+    },
+    {
+      "Id": "C:\\C#_CNTT_1605\\Website_Sport\\Website_Sport\\wwwroot\\MasterLayout\\images\\product-6.jpg",
+      "PackagePath": "staticwebassets\\MasterLayout\\images\\product-6.jpg"
+    },
+    {
+      "Id": "C:\\C#_CNTT_1605\\Website_Sport\\Website_Sport\\wwwroot\\MasterLayout\\images\\product-7.jpg",
+      "PackagePath": "staticwebassets\\MasterLayout\\images\\product-7.jpg"
+    },
+    {
+      "Id": "C:\\C#_CNTT_1605\\Website_Sport\\Website_Sport\\wwwroot\\MasterLayout\\images\\product-8.jpg",
+      "PackagePath": "staticwebassets\\MasterLayout\\images\\product-8.jpg"
+    },
+    {
+      "Id": "C:\\C#_CNTT_1605\\Website_Sport\\Website_Sport\\wwwroot\\MasterLayout\\images\\product-9.jpg",
+      "PackagePath": "staticwebassets\\MasterLayout\\images\\product-9.jpg"
+    },
+    {
+      "Id": "C:\\C#_CNTT_1605\\Website_Sport\\Website_Sport\\wwwroot\\MasterLayout\\images\\user-1.png",
+      "PackagePath": "staticwebassets\\MasterLayout\\images\\user-1.png"
+    },
+    {
+      "Id": "C:\\C#_CNTT_1605\\Website_Sport\\Website_Sport\\wwwroot\\MasterLayout\\images\\user-2.png",
+      "PackagePath": "staticwebassets\\MasterLayout\\images\\user-2.png"
+    },
+    {
+      "Id": "C:\\C#_CNTT_1605\\Website_Sport\\Website_Sport\\wwwroot\\MasterLayout\\images\\user-3.png",
+      "PackagePath": "staticwebassets\\MasterLayout\\images\\user-3.png"
+    },
+    {
+      "Id": "C:\\C#_CNTT_1605\\Website_Sport\\Website_Sport\\wwwroot\\MasterLayout\\style.css",
+      "PackagePath": "staticwebassets\\MasterLayout\\style.css"
+    },
+    {
+      "Id": "C:\\C#_CNTT_1605\\Website_Sport\\Website_Sport\\wwwroot\\css\\site.css",
+      "PackagePath": "staticwebassets\\css\\site.css"
+    },
+    {
+      "Id": "C:\\C#_CNTT_1605\\Website_Sport\\Website_Sport\\wwwroot\\favicon.ico",
+      "PackagePath": "staticwebassets\\favicon.ico"
+    },
+    {
+      "Id": "C:\\C#_CNTT_1605\\Website_Sport\\Website_Sport\\wwwroot\\images\\Ảnh chụp màn hình (307)_1048a795-bcd8-4a37-b8a5-24f387b390fd.png",
+      "PackagePath": "staticwebassets\\images\\Ảnh chụp màn hình (307)_1048a795-bcd8-4a37-b8a5-24f387b390fd.png"
+    },
+    {
+      "Id": "C:\\C#_CNTT_1605\\Website_Sport\\Website_Sport\\wwwroot\\images\\Ảnh chụp màn hình (307)_6ab47b0c-92b8-40d1-a00c-986b3e10c485.png",
+      "PackagePath": "staticwebassets\\images\\Ảnh chụp màn hình (307)_6ab47b0c-92b8-40d1-a00c-986b3e10c485.png"
+    },
+    {
+      "Id": "C:\\C#_CNTT_1605\\Website_Sport\\Website_Sport\\wwwroot\\images\\Ảnh chụp màn hình (307)_c6616808-ce38-40b0-ab30-5779e56624c7.png",
+      "PackagePath": "staticwebassets\\images\\Ảnh chụp màn hình (307)_c6616808-ce38-40b0-ab30-5779e56624c7.png"
+    },
+    {
+      "Id": "C:\\C#_CNTT_1605\\Website_Sport\\Website_Sport\\wwwroot\\images\\Ảnh chụp màn hình (307)_e3fa8a14-bce8-4d0e-bf8e-fa5643d2fec0.png",
+      "PackagePath": "staticwebassets\\images\\Ảnh chụp màn hình (307)_e3fa8a14-bce8-4d0e-bf8e-fa5643d2fec0.png"
+    },
+    {
+      "Id": "C:\\C#_CNTT_1605\\Website_Sport\\Website_Sport\\wwwroot\\images\\Ảnh chụp màn hình (363)_a9117239-75a5-4a45-ac57-11924e2329fe.png",
+      "PackagePath": "staticwebassets\\images\\Ảnh chụp màn hình (363)_a9117239-75a5-4a45-ac57-11924e2329fe.png"
+    },
+    {
+      "Id": "C:\\C#_CNTT_1605\\Website_Sport\\Website_Sport\\wwwroot\\images\\Ảnh chụp màn hình (373)_37b0d633-f3fd-44b1-9b20-6043ac831811.png",
+      "PackagePath": "staticwebassets\\images\\Ảnh chụp màn hình (373)_37b0d633-f3fd-44b1-9b20-6043ac831811.png"
+    },
+    {
+      "Id": "C:\\C#_CNTT_1605\\Website_Sport\\Website_Sport\\wwwroot\\images\\Ảnh chụp màn hình (491)_0f1ba51d-f5f6-4dad-abc0-24c8ec1e33fa.png",
+      "PackagePath": "staticwebassets\\images\\Ảnh chụp màn hình (491)_0f1ba51d-f5f6-4dad-abc0-24c8ec1e33fa.png"
+    },
+    {
+      "Id": "C:\\C#_CNTT_1605\\Website_Sport\\Website_Sport\\wwwroot\\images\\Ảnh chụp màn hình (491)_a6f7b7aa-be55-4c68-86dd-ef65bce4a219.png",
+      "PackagePath": "staticwebassets\\images\\Ảnh chụp màn hình (491)_a6f7b7aa-be55-4c68-86dd-ef65bce4a219.png"
+    },
+    {
+      "Id": "C:\\C#_CNTT_1605\\Website_Sport\\Website_Sport\\wwwroot\\images\\Ảnh chụp màn hình 2022-09-22 095024_a5b0cd7e-4668-437d-8367-aecd7f448250.png",
+      "PackagePath": "staticwebassets\\images\\Ảnh chụp màn hình 2022-09-22 095024_a5b0cd7e-4668-437d-8367-aecd7f448250.png"
+    },
+    {
+      "Id": "C:\\C#_CNTT_1605\\Website_Sport\\Website_Sport\\wwwroot\\images\\Ảnh chụp màn hình 2022-09-22 185029_3e4e15bc-5ebd-45f5-ad51-a83708195981.png",
+      "PackagePath": "staticwebassets\\images\\Ảnh chụp màn hình 2022-09-22 185029_3e4e15bc-5ebd-45f5-ad51-a83708195981.png"
+    },
+    {
+      "Id": "C:\\C#_CNTT_1605\\Website_Sport\\Website_Sport\\wwwroot\\images\\Ảnh chụp màn hình 2022-09-22 185029_b56be88b-80ff-46de-b25b-fc91579d6a05.png",
+      "PackagePath": "staticwebassets\\images\\Ảnh chụp màn hình 2022-09-22 185029_b56be88b-80ff-46de-b25b-fc91579d6a05.png"
+    },
+    {
+      "Id": "C:\\C#_CNTT_1605\\Website_Sport\\Website_Sport\\wwwroot\\images\\Ảnh chụp màn hình 2022-09-22 185110_cbfe69ac-fa16-4f6b-8b67-2bc53a067209.png",
+      "PackagePath": "staticwebassets\\images\\Ảnh chụp màn hình 2022-09-22 185110_cbfe69ac-fa16-4f6b-8b67-2bc53a067209.png"
+    },
+    {
+      "Id": "C:\\C#_CNTT_1605\\Website_Sport\\Website_Sport\\wwwroot\\images\\Ảnh chụp màn hình 2022-09-26 111031_fa6c6af1-824c-428b-8ab8-8f4d5e44cd30.png",
+      "PackagePath": "staticwebassets\\images\\Ảnh chụp màn hình 2022-09-26 111031_fa6c6af1-824c-428b-8ab8-8f4d5e44cd30.png"
+    },
+    {
+      "Id": "C:\\C#_CNTT_1605\\Website_Sport\\Website_Sport\\wwwroot\\images\\NguyenDucThanh_08-10-04_CNTT16-05_Khá_076a842f-366b-4e4f-9317-dc4b65521f96.jpg",
+      "PackagePath": "staticwebassets\\images\\NguyenDucThanh_08-10-04_CNTT16-05_Khá_076a842f-366b-4e4f-9317-dc4b65521f96.jpg"
+    },
+    {
+      "Id": "C:\\C#_CNTT_1605\\Website_Sport\\Website_Sport\\wwwroot\\images\\Nguyễn Đức Thanh - Cá nhân - Microsoft​ Edge 2023-05-20 09-44-55_7c790c52-c75e-48ff-adc0-84d1573da7e6.mp4",
+      "PackagePath": "staticwebassets\\images\\Nguyễn Đức Thanh - Cá nhân - Microsoft​ Edge 2023-05-20 09-44-55_7c790c52-c75e-48ff-adc0-84d1573da7e6.mp4"
+    },
+    {
+      "Id": "C:\\C#_CNTT_1605\\Website_Sport\\Website_Sport\\wwwroot\\images\\WIN_20230417_15_53_09_Pro (2)_2562f383-37e6-413a-a7d3-954e6e0a99f9.jpg",
+      "PackagePath": "staticwebassets\\images\\WIN_20230417_15_53_09_Pro (2)_2562f383-37e6-413a-a7d3-954e6e0a99f9.jpg"
+    },
+    {
+      "Id": "C:\\C#_CNTT_1605\\Website_Sport\\Website_Sport\\wwwroot\\images\\akaza_a37ee875-e6b7-40a9-9fb2-3fa8332ce8bc.jpg",
+      "PackagePath": "staticwebassets\\images\\akaza_a37ee875-e6b7-40a9-9fb2-3fa8332ce8bc.jpg"
+    },
+    {
+      "Id": "C:\\C#_CNTT_1605\\Website_Sport\\Website_Sport\\wwwroot\\images\\akaza_bcf10145-1398-4558-ac0a-92a2f340c790.jpg",
+      "PackagePath": "staticwebassets\\images\\akaza_bcf10145-1398-4558-ac0a-92a2f340c790.jpg"
+    },
+    {
+      "Id": "C:\\C#_CNTT_1605\\Website_Sport\\Website_Sport\\wwwroot\\images\\akaza_beda7906-55a2-4093-9a00-44aa6031467c.jpg",
+      "PackagePath": "staticwebassets\\images\\akaza_beda7906-55a2-4093-9a00-44aa6031467c.jpg"
+    },
+    {
+      "Id": "C:\\C#_CNTT_1605\\Website_Sport\\Website_Sport\\wwwroot\\images\\be-ca-thuy-sinh_84c5c960-3638-4baf-82cf-afa6d26a7ff1.jpg",
+      "PackagePath": "staticwebassets\\images\\be-ca-thuy-sinh_84c5c960-3638-4baf-82cf-afa6d26a7ff1.jpg"
+    },
+    {
+      "Id": "C:\\C#_CNTT_1605\\Website_Sport\\Website_Sport\\wwwroot\\images\\be-ca-thuy-sinh_a63885b6-3ff4-44e9-9e11-c1cf4939925b.jpg",
+      "PackagePath": "staticwebassets\\images\\be-ca-thuy-sinh_a63885b6-3ff4-44e9-9e11-c1cf4939925b.jpg"
+    },
+    {
+      "Id": "C:\\C#_CNTT_1605\\Website_Sport\\Website_Sport\\wwwroot\\images\\be-ca-thuy-sinh_f9799c1b-0541-4d70-a9dd-50c818026e4a.jpg",
+      "PackagePath": "staticwebassets\\images\\be-ca-thuy-sinh_f9799c1b-0541-4d70-a9dd-50c818026e4a.jpg"
+    },
+    {
+      "Id": "C:\\C#_CNTT_1605\\Website_Sport\\Website_Sport\\wwwroot\\images\\h1.png_904a530a-397e-493d-adfb-52f26d2ac881.webp",
+      "PackagePath": "staticwebassets\\images\\h1.png_904a530a-397e-493d-adfb-52f26d2ac881.webp"
+    },
+    {
+      "Id": "C:\\C#_CNTT_1605\\Website_Sport\\Website_Sport\\wwwroot\\images\\hinh-nen-may-tinh-chill-4k (1)_f25b8df6-01fd-4d7a-8766-a35cb6ab1d7c.webp",
+      "PackagePath": "staticwebassets\\images\\hinh-nen-may-tinh-chill-4k (1)_f25b8df6-01fd-4d7a-8766-a35cb6ab1d7c.webp"
+    },
+    {
+      "Id": "C:\\C#_CNTT_1605\\Website_Sport\\Website_Sport\\wwwroot\\images\\img2_b2acdfdc-5fd4-42fb-856e-bcec8910722f.jpg",
+      "PackagePath": "staticwebassets\\images\\img2_b2acdfdc-5fd4-42fb-856e-bcec8910722f.jpg"
+    },
+    {
+      "Id": "C:\\C#_CNTT_1605\\Website_Sport\\Website_Sport\\wwwroot\\images\\terarium_e2c1871f-b52c-4657-9ef4-499c410a469c.jpg",
+      "PackagePath": "staticwebassets\\images\\terarium_e2c1871f-b52c-4657-9ef4-499c410a469c.jpg"
+    },
+    {
+      "Id": "C:\\C#_CNTT_1605\\Website_Sport\\Website_Sport\\wwwroot\\images\\thanh_27772fd2-a52a-4e20-97db-dcf925a03783.jpg",
+      "PackagePath": "staticwebassets\\images\\thanh_27772fd2-a52a-4e20-97db-dcf925a03783.jpg"
+    },
+    {
+      "Id": "C:\\C#_CNTT_1605\\Website_Sport\\Website_Sport\\wwwroot\\images\\yoriichi_e01c4573-1366-4b00-ae3a-bb54e5f538c3.jpg",
+      "PackagePath": "staticwebassets\\images\\yoriichi_e01c4573-1366-4b00-ae3a-bb54e5f538c3.jpg"
+    },
+    {
+      "Id": "C:\\C#_CNTT_1605\\Website_Sport\\Website_Sport\\wwwroot\\js\\site.js",
+      "PackagePath": "staticwebassets\\js\\site.js"
+    },
+    {
+      "Id": "C:\\C#_CNTT_1605\\Website_Sport\\Website_Sport\\wwwroot\\lib\\bootstrap\\LICENSE",
+      "PackagePath": "staticwebassets\\lib\\bootstrap"
+    },
+    {
+      "Id": "C:\\C#_CNTT_1605\\Website_Sport\\Website_Sport\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css"
+    },
+    {
+      "Id": "C:\\C#_CNTT_1605\\Website_Sport\\Website_Sport\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css.map"
+    },
+    {
+      "Id": "C:\\C#_CNTT_1605\\Website_Sport\\Website_Sport\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css"
+    },
+    {
+      "Id": "C:\\C#_CNTT_1605\\Website_Sport\\Website_Sport\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css.map"
+    },
+    {
+      "Id": "C:\\C#_CNTT_1605\\Website_Sport\\Website_Sport\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css"
+    },
+    {
+      "Id": "C:\\C#_CNTT_1605\\Website_Sport\\Website_Sport\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css.map"
+    },
+    {
+      "Id": "C:\\C#_CNTT_1605\\Website_Sport\\Website_Sport\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css"
+    },
+    {
+      "Id": "C:\\C#_CNTT_1605\\Website_Sport\\Website_Sport\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css.map"
+    },
+    {
+      "Id": "C:\\C#_CNTT_1605\\Website_Sport\\Website_Sport\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css"
+    },
+    {
+      "Id": "C:\\C#_CNTT_1605\\Website_Sport\\Website_Sport\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css.map"
+    },
+    {
+      "Id": "C:\\C#_CNTT_1605\\Website_Sport\\Website_Sport\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css"
+    },
+    {
+      "Id": "C:\\C#_CNTT_1605\\Website_Sport\\Website_Sport\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css.map"
+    },
+    {
+      "Id": "C:\\C#_CNTT_1605\\Website_Sport\\Website_Sport\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css"
+    },
+    {
+      "Id": "C:\\C#_CNTT_1605\\Website_Sport\\Website_Sport\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css.map"
+    },
+    {
+      "Id": "C:\\C#_CNTT_1605\\Website_Sport\\Website_Sport\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css"
+    },
+    {
+      "Id": "C:\\C#_CNTT_1605\\Website_Sport\\Website_Sport\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css.map"
+    },
+    {
+      "Id": "C:\\C#_CNTT_1605\\Website_Sport\\Website_Sport\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css"
+    },
+    {
+      "Id": "C:\\C#_CNTT_1605\\Website_Sport\\Website_Sport\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css.map"
+    },
+    {
+      "Id": "C:\\C#_CNTT_1605\\Website_Sport\\Website_Sport\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css"
+    },
+    {
+      "Id": "C:\\C#_CNTT_1605\\Website_Sport\\Website_Sport\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css.map"
+    },
+    {
+      "Id": "C:\\C#_CNTT_1605\\Website_Sport\\Website_Sport\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css"
+    },
+    {
+      "Id": "C:\\C#_CNTT_1605\\Website_Sport\\Website_Sport\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css.map"
+    },
+    {
+      "Id": "C:\\C#_CNTT_1605\\Website_Sport\\Website_Sport\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css"
+    },
+    {
+      "Id": "C:\\C#_CNTT_1605\\Website_Sport\\Website_Sport\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css.map"
+    },
+    {
+      "Id": "C:\\C#_CNTT_1605\\Website_Sport\\Website_Sport\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.css"
+    },
+    {
+      "Id": "C:\\C#_CNTT_1605\\Website_Sport\\Website_Sport\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.css.map"
+    },
+    {
+      "Id": "C:\\C#_CNTT_1605\\Website_Sport\\Website_Sport\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.min.css"
+    },
+    {
+      "Id": "C:\\C#_CNTT_1605\\Website_Sport\\Website_Sport\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.min.css.map"
+    },
+    {
+      "Id": "C:\\C#_CNTT_1605\\Website_Sport\\Website_Sport\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css"
+    },
+    {
+      "Id": "C:\\C#_CNTT_1605\\Website_Sport\\Website_Sport\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css.map"
+    },
+    {
+      "Id": "C:\\C#_CNTT_1605\\Website_Sport\\Website_Sport\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css"
+    },
+    {
+      "Id": "C:\\C#_CNTT_1605\\Website_Sport\\Website_Sport\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css.map"
+    },
+    {
+      "Id": "C:\\C#_CNTT_1605\\Website_Sport\\Website_Sport\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js"
+    },
+    {
+      "Id": "C:\\C#_CNTT_1605\\Website_Sport\\Website_Sport\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js.map"
+    },
+    {
+      "Id": "C:\\C#_CNTT_1605\\Website_Sport\\Website_Sport\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js"
+    },
+    {
+      "Id": "C:\\C#_CNTT_1605\\Website_Sport\\Website_Sport\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js.map"
+    },
+    {
+      "Id": "C:\\C#_CNTT_1605\\Website_Sport\\Website_Sport\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js"
+    },
+    {
+      "Id": "C:\\C#_CNTT_1605\\Website_Sport\\Website_Sport\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js.map"
+    },
+    {
+      "Id": "C:\\C#_CNTT_1605\\Website_Sport\\Website_Sport\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js"
+    },
+    {
+      "Id": "C:\\C#_CNTT_1605\\Website_Sport\\Website_Sport\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js.map"
+    },
+    {
+      "Id": "C:\\C#_CNTT_1605\\Website_Sport\\Website_Sport\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.js",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.js"
+    },
+    {
+      "Id": "C:\\C#_CNTT_1605\\Website_Sport\\Website_Sport\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.js.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.js.map"
+    },
+    {
+      "Id": "C:\\C#_CNTT_1605\\Website_Sport\\Website_Sport\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.min.js",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.min.js"
+    },
+    {
+      "Id": "C:\\C#_CNTT_1605\\Website_Sport\\Website_Sport\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.min.js.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.min.js.map"
+    },
+    {
+      "Id": "C:\\C#_CNTT_1605\\Website_Sport\\Website_Sport\\wwwroot\\lib\\jquery-validation-unobtrusive\\LICENSE.txt",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation-unobtrusive\\LICENSE.txt"
+    },
+    {
+      "Id": "C:\\C#_CNTT_1605\\Website_Sport\\Website_Sport\\wwwroot\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.js"
+    },
+    {
+      "Id": "C:\\C#_CNTT_1605\\Website_Sport\\Website_Sport\\wwwroot\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.min.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.min.js"
+    },
+    {
+      "Id": "C:\\C#_CNTT_1605\\Website_Sport\\Website_Sport\\wwwroot\\lib\\jquery-validation\\LICENSE.md",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation\\LICENSE.md"
+    },
+    {
+      "Id": "C:\\C#_CNTT_1605\\Website_Sport\\Website_Sport\\wwwroot\\lib\\jquery-validation\\dist\\additional-methods.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation\\dist\\additional-methods.js"
+    },
+    {
+      "Id": "C:\\C#_CNTT_1605\\Website_Sport\\Website_Sport\\wwwroot\\lib\\jquery-validation\\dist\\additional-methods.min.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation\\dist\\additional-methods.min.js"
+    },
+    {
+      "Id": "C:\\C#_CNTT_1605\\Website_Sport\\Website_Sport\\wwwroot\\lib\\jquery-validation\\dist\\jquery.validate.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation\\dist\\jquery.validate.js"
+    },
+    {
+      "Id": "C:\\C#_CNTT_1605\\Website_Sport\\Website_Sport\\wwwroot\\lib\\jquery-validation\\dist\\jquery.validate.min.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation\\dist\\jquery.validate.min.js"
+    },
+    {
+      "Id": "C:\\C#_CNTT_1605\\Website_Sport\\Website_Sport\\wwwroot\\lib\\jquery\\LICENSE.txt",
+      "PackagePath": "staticwebassets\\lib\\jquery\\LICENSE.txt"
+    },
+    {
+      "Id": "C:\\C#_CNTT_1605\\Website_Sport\\Website_Sport\\wwwroot\\lib\\jquery\\dist\\jquery.js",
+      "PackagePath": "staticwebassets\\lib\\jquery\\dist\\jquery.js"
+    },
+    {
+      "Id": "C:\\C#_CNTT_1605\\Website_Sport\\Website_Sport\\wwwroot\\lib\\jquery\\dist\\jquery.min.js",
+      "PackagePath": "staticwebassets\\lib\\jquery\\dist\\jquery.min.js"
+    },
+    {
+      "Id": "C:\\C#_CNTT_1605\\Website_Sport\\Website_Sport\\wwwroot\\lib\\jquery\\dist\\jquery.min.map",
+      "PackagePath": "staticwebassets\\lib\\jquery\\dist\\jquery.min.map"
+    },
+    {
+      "Id": "obj\\Debug\\net7.0\\staticwebassets\\msbuild.Website_Sport.Microsoft.AspNetCore.StaticWebAssets.props",
+      "PackagePath": "build\\Microsoft.AspNetCore.StaticWebAssets.props"
+    },
+    {
+      "Id": "obj\\Debug\\net7.0\\staticwebassets\\msbuild.build.Website_Sport.props",
+      "PackagePath": "build\\Website_Sport.props"
+    },
+    {
+      "Id": "obj\\Debug\\net7.0\\staticwebassets\\msbuild.buildMultiTargeting.Website_Sport.props",
+      "PackagePath": "buildMultiTargeting\\Website_Sport.props"
+    },
+    {
+      "Id": "obj\\Debug\\net7.0\\staticwebassets\\msbuild.buildTransitive.Website_Sport.props",
+      "PackagePath": "buildTransitive\\Website_Sport.props"
+    }
+  ],
+  "ElementsToRemove": []
+}

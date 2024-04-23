@@ -1,0 +1,53 @@
+﻿@model WebThanhCode.Models.Image
+
+@{
+    ViewData["Title"] = "EditImage";
+    Layout = "~/Views/Shared/_LayoutAdmin.cshtml";
+}
+
+<h5 style="margin-bottom: 20px">Sửa hình ảnh</h5>
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="EditImage" enctype="multipart/form-data">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="mb-3">
+                <label asp-for="Image1" class="control-label"></label>
+                <img id="imagePreview" src="@Url.Content(Model.Image1)" style="max-width: 100px; margin-bottom: 10px" />
+                <input type="file" name="ImageFile" id="imageInput" onchange="previewImage(this);" />
+                <span asp-validation-for="Image1" class="text-danger"></span>
+            </div>
+            <div class="mb-3" hidden>
+                <label asp-for="Main" class="control-label"></label>
+                <input asp-for="Main" class="form-control" />
+                <span asp-validation-for="Main" class="text-danger"></span>
+            </div>
+            <div class="mb-3" hidden>
+                <label asp-for="ProductId" class="control-label"></label>
+                <input asp-for="ProductId" class="form-control" />
+                <span asp-validation-for="ProductId" class="text-danger"></span>
+            </div>
+            <div class="mb-3">
+                <input type="submit" value="Save" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>
+
+    <script>
+        function previewImage(input) {
+            if (input.files && input.files[0]) {
+                var reader = new FileReader();
+
+                reader.onload = function (e) {
+                    $('#imagePreview').attr('src', e.target.result);
+                }
+
+                reader.readAsDataURL(input.files[0]);
+            }
+        }
+    </script>
+

@@ -1,0 +1,353 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+    Layout = "~/Views/Shared/MasterLayout.cshtml";
+}
+@model List<Website_Sport.Models.Product>
+<link rel="stylesheet" href="../MasterLayout/style.css">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet">
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+<div class="header">
+    <div class="container">
+        <div class="row">
+            <div class="col-2">
+                <h1>Give Your Workout<br> A New Style!</h1>
+                <p>
+                    Success ins't always about greatness. It's about
+                    consistency. Consistent <br>hard work gains success. Greatness
+                    will come.
+                </p>
+                <a href="" class="btn">Explore Now &#8594;</a>
+            </div>
+            <div class="col-2">
+                <img src="../MasterLayout/images/image1.png">
+            </div>
+        </div>
+    </div>
+
+</div>
+
+<!-- ------------- featured categorries ---------------- -->
+<div class="categories">
+    <div class="small-container">
+        <div class="row">
+            <div class="col-3">
+                <img src="../MasterLayout/images/category-1.jpg">
+            </div>
+            <div class="col-3">
+                <img src="../MasterLayout/images/category-2.jpg">
+            </div>
+            <div class="col-3">
+                <img src="../MasterLayout/images/category-3.jpg">
+            </div>
+
+        </div>
+    </div>
+
+</div>
+<!-- ------------- featured products ---------------- -->
+<div class="small-container">
+    <h2 class="title">Selling Products</h2>
+    <div class="row">
+         @foreach (var product in Model)
+    {
+        <div class="col-4">
+                <a href="/product-detail"><img src="http://localhost:5177/api/product@(product.Images.First().Image1)"></a>
+                <a href="/product-detail"><h4>@product.ProductName</h4></a>
+            <div class="rating">
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star-o"></i>
+            </div>
+                <p>@product.Price</p>
+        </div>
+        }
+        </div>
+       @*  <div class="col-4">
+            <img src="../MasterLayout/images/product-2.jpg">
+            <h4>Red Printed T-Shirt</h4>
+            <div class="rating">
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star-half-o"></i>
+                <i class="fa fa-star-o"></i>
+            </div>
+            <p>$50.00</p>
+        </div>
+        <div class="col-4">
+            <img src="../MasterLayout/images/product-3.jpg">
+            <h4>Red Printed T-Shirt</h4>
+            <div class="rating">
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star-half-o"></i>
+            </div>
+            <p>$50.00</p>
+        </div>
+        <div class="col-4">
+            <img src="../MasterLayout/images/product-4.jpg">
+            <h4>Red Printed T-Shirt</h4>
+            <div class="rating">
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star-o"></i>
+            </div>
+            <p>$50.00</p>
+        </div>
+    </div> *@
+   @*  <div class="row">
+        <div class="col-4">
+            <a href="/product-detail"><img src="../MasterLayout/images/product-1.jpg"></a>
+            <a href="/product-detail"><h4>Red Printed T-Shirt</h4></a>
+            <div class="rating">
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star-o"></i>
+            </div>
+            <p>$50.00</p>
+        </div>
+        <div class="col-4">
+            <img src="../MasterLayout/images/product-2.jpg">
+            <h4>Red Printed T-Shirt</h4>
+            <div class="rating">
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star-half-o"></i>
+                <i class="fa fa-star-o"></i>
+            </div>
+            <p>$50.00</p>
+        </div>
+        <div class="col-4">
+            <img src="../MasterLayout/images/product-3.jpg">
+            <h4>Red Printed T-Shirt</h4>
+            <div class="rating">
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star-half-o"></i>
+            </div>
+            <p>$50.00</p>
+        </div>
+        <div class="col-4">
+            <img src="../MasterLayout/images/product-4.jpg">
+            <h4>Red Printed T-Shirt</h4>
+            <div class="rating">
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star-o"></i>
+            </div>
+            <p>$50.00</p>
+        </div>
+    </div> *@
+
+    <h2 class="title">Latest Products</h2>
+    <div class="row">
+        <div class="col-4">
+            <img src="../MasterLayout/images/product-5.jpg">
+            <h4>Red Printed T-Shirt</h4>
+            <div class="rating">
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star-o"></i>
+            </div>
+            <p>$50.00</p>
+        </div>
+        <div class="col-4">
+            <img src="../MasterLayout/images/product-6.jpg">
+            <h4>Red Printed T-Shirt</h4>
+            <div class="rating">
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star-half-o"></i>
+                <i class="fa fa-star-o"></i>
+            </div>
+            <p>$50.00</p>
+        </div>
+        <div class="col-4">
+            <img src="../MasterLayout/images/product-7.jpg">
+            <h4>Red Printed T-Shirt</h4>
+            <div class="rating">
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star-half-o"></i>
+            </div>
+            <p>$50.00</p>
+        </div>
+        <div class="col-4">
+            <img src="../MasterLayout/images/product-8.jpg">
+            <h4>Red Printed T-Shirt</h4>
+            <div class="rating">
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star-o"></i>
+            </div>
+            <p>$50.00</p>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-4">
+            <img src="../MasterLayout/images/product-9.jpg">
+            <h4>Red Printed T-Shirt</h4>
+            <div class="rating">
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star-o"></i>
+            </div>
+            <p>$50.00</p>
+        </div>
+        <div class="col-4">
+            <img src="../MasterLayout/images/product-10.jpg">
+            <h4>Red Printed T-Shirt</h4>
+            <div class="rating">
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star-half-o"></i>
+                <i class="fa fa-star-o"></i>
+            </div>
+            <p>$50.00</p>
+        </div>
+        <div class="col-4">
+            <img src="../MasterLayout/images/product-11.jpg">
+            <h4>Red Printed T-Shirt</h4>
+            <div class="rating">
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star-half-o"></i>
+            </div>
+            <p>$50.00</p>
+        </div>
+        <div class="col-4">
+            <img src="../MasterLayout/images/product-12.jpg">
+            <h4>Red Printed T-Shirt</h4>
+            <div class="rating">
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star-o"></i>
+            </div>
+            <p>$50.00</p>
+        </div>
+    </div>
+</div>
+<!-- ------------ offer -------------- -->
+<div class="offer">
+    <div class="small-container">
+        <div class="row">
+            <div class="col-2"><img src="data:image/jpeg;base64,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" class="offer-img"> </div>
+            <div class="col-2">
+                <p>Exclusive Availabble on Thanh Nguyen</p>
+                <h1>Thanh Nguyen's Sports Shop</h1>
+                <small>
+                    Shop ThanhNguyen specializes in providing sports products, all items are genuine.
+                </small><br />
+                <a href="" class="btn">Buy Now &#8594;</a>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- ------------ testimonial -------------- -->
+<div class="testimonial">
+    <div class="small-container">
+        <div class="row">
+            <div class="col-3">
+                <i class="fa fa-qoute-lef"></i>
+                <p>
+                    Abilities or he perfectly pretended so strangers be exquisite. Oh to another chamber pleased
+                    imagine do in. Went me rank at last loud shot an draw. Excellent so to no sincerity smallness.
+                    Removal request delight if on he we
+                </p>
+                <div class="rating">
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star-o"></i>
+                </div>
+                <img src="../MasterLayout/images/user-1.png">
+                <h3>Đạt 1 Phích</h3>
+            </div>
+            <div class="col-3">
+                <i class="fa fa-qoute-lef"></i>
+                <p>
+                    Abilities or he perfectly pretended so strangers be exquisite. Oh to another chamber pleased
+                    imagine do in. Went me rank at last loud shot an draw. Excellent so to no sincerity smallness.
+                    Removal request delight if on he we
+                </p>
+                <div class="rating">
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star-o"></i>
+                </div>
+                <img src="../MasterLayout/images/user-2.png">
+                <h3>An Nguyen</h3>
+            </div>
+            <div class="col-3">
+                <i class="fa fa-qoute-lef"></i>
+                <p>
+                    Abilities or he perfectly pretended so strangers be exquisite. Oh to another chamber pleased
+                    imagine do in. Went me rank at last loud shot an draw. Excellent so to no sincerity smallness.
+                    Removal request delight if on he we
+                </p>
+                <div class="rating">
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star-o"></i>
+                </div>
+                <img src="../MasterLayout/images/user-3.png">
+                <h3>Quang Hoang</h3>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- ------------------- brands --------------------- -->
+<div class="brands">
+    <div class="small-container">
+        <div class="row">
+            <div class="col-5">
+                <img src="../MasterLayout/images/adidas2.jpg">
+            </div>
+            <div class="col-5">
+                <img src="../MasterLayout/images/logo-oppo.png">
+            </div>
+            <div class="col-5">
+                <img src="../MasterLayout/images/logo-coca-cola.png">
+            </div>
+            <div class="col-5">
+                <img src="../MasterLayout/images/logo-paypal.png">
+            </div>
+            <div class="col-5">
+                <img src="../MasterLayout/images/logo-philips.png">
+            </div>
+        </div>
+    </div>
+</div> 

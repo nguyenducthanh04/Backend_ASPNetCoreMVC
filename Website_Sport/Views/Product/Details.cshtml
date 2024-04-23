@@ -1,0 +1,389 @@
+﻿@model Website_Sport.Models.Product
+@{
+    ViewData["Title"] = "Product-Detail";
+    Layout = "~/Views/Shared/MasterLayout.cshtml";
+    ShopTheThaoContext context = new ShopTheThaoContext();
+    var idString = ViewContext.RouteData.Values["id"]?.ToString();
+    int id;
+}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your Title</title>
+    <!-- Các link CSS và script khác -->
+    <!-- ---------- single Products detail ----------- -->
+    <link rel="stylesheet" href="../MasterLayout/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+          rel="stylesheet">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <style>
+        .header {
+            /* Loại bỏ thuộc tính CSS cụ thể */
+            background: initial !important; /* Hoặc có thể sử dụng giá trị khác như 'unset' */
+        }
+    </style>
+</head>
+<body>
+    <!-- Nội dung trang web -->
+    <div class="small-container single-product">
+        <div class="row">
+            <div class="col-2">
+                <img src="http://localhost:5177/api/product@(Model.Images.First().Image1)" width="100%" id="productImg">
+
+                <div class="small-img-row">
+                    @{
+                        if (int.TryParse(idString, out id))
+                        {
+                            var productId = id;
+                            var images = context.Images.Where(i => i.ProductId == productId)
+                            .OrderByDescending(i => i.ImageId)
+                            .Take(4)
+                            .ToList();
+                            if (images != null && images.Any())
+                            {
+                                foreach (var image in images)
+                                {
+                                            <div class="small-img-rol">
+
+                                                <img src="http://localhost:5177/api/product@(image.Image1)" alt="Product Image" width="100%" class="small-img" />
+                                            </div>
+
+                                }
+                            }
+                            else
+                            {
+                                        <p>No images available</p>
+                            }
+                        }
+                    }
+                </div>
+
+            </div>
+            <div class="col-2">
+                <p>Home / T-Shirt</p>
+                <h1>@Model.Type</h1>
+                <h4>@Model.Price</h4>
+                @{
+                    var products = context.Products.Where(p => p.Type == Model.Type).ToList();
+                    var selectedColor = "";
+
+                }
+               @*  @foreach (var color in products.Select(p => p.Color).Distinct())
+                {
+                    <button class="colorButton" value="@color">@color</button>
+                } *@
+               @*  @if (hasNonZeroColor)
+                { *@
+                    <select id="colorSelect">
+                        <option>Chọn màu</option>
+                        @foreach (var color in products.Select(p => p.Color).Distinct())
+                        {
+                                <option value="@color">@color</option>
+                        }
+                    </select>
+             @*    } *@
+               
+
+              @*   <div id="productList">
+                    <!-- Placeholder for product list -->
+                </div> *@
+                <select id="sizeSelect">
+                    <option>Select Size</option>
+                </select>
+
+                <script>
+
+                    document.addEventListener('DOMContentLoaded', function () {
+                       
+                        colorSelect.addEventListener('change', function () { // Sự kiện 'change' khi chọn một tùy chọn từ select
+                            const color = this.value; // Lấy giá trị mà người dùng đã chọn từ select
+                            // Lấy giá trị Type từ Razor
+                            console.log(color);
+                            const type = "@Model.Type"; // Lấy giá trị Type từ Razor
+                                    const typeElement = document.createElement('div');
+                                    typeElement.innerHTML = type;
+                                    const decodedType = typeElement.textContent;
+                            console.log(decodedType);
+                            const url = `http://localhost:5177/api/get-product?color=${color}&type=${decodedType}`;
+
+                            fetch(url)
+                                .then(response => {
+                                    if (!response.ok) {
+                                        throw new Error('Network response was not ok');
+                                    }
+                                    return response.json();
+                                })
+                            fetch(url)
+                                .then(response => {
+                                    if (!response.ok) {
+                                        throw new Error('Network response was not ok');
+                                    }
+                                    return response.json();
+                                    
+                                })
+                                .then(data => {
+                                    const sizeSelect = document.getElementById('sizeSelect');
+                                    // Kiểm tra nếu tất cả các kích thước đều bằng 0
+                                    // const allSizesZero = data.every(product => product.size === 0);
+                                    // if (!allSizesZero) {
+                                        sizeSelect.innerHTML = ''; // Xóa nội dung cũ
+                                        console.log(data);
+                                        // Thêm tùy chọn "Select Size" vào đầu tiên
+                                        const defaultOption = document.createElement('option');
+                                        defaultOption.text = 'Select Size';
+                                        defaultOption.disabled = true;
+                                        defaultOption.selected = true;
+                                        sizeSelect.appendChild(defaultOption);
+
+                                        // Thêm các tùy chọn từ trường 'size' của mỗi object vào thẻ select
+                                        data.forEach(product => {
+                                            const option = document.createElement('option');
+                                            option.text = product.size;
+                                            sizeSelect.appendChild(option);
+                                        });
+                                        sizeSelect.addEventListener('change', function () {
+                                            const selectedSize = this.value; // Lấy giá trị của tùy chọn đã chọn
+
+                                            // Sử dụng giá trị đã chọn ở đây, ví dụ:
+                                            console.log("Selected size:", selectedSize);
+                                        });
+                                    // } else {
+                                    //     // Nếu tất cả các kích thước đều bằng 0, ẩn thẻ <select>
+                                    //     sizeSelect.style.display = 'none';
+                                    // }
+                                })
+                                .catch(error => {
+                                    console.error('There was an error with the fetch operation:', error);
+                                });
+
+                        });
+                    });
+                </script>
+                    <input type="number" value="1">
+                    <a href="" class="btn">Add To Card</a>
+                    <h3>
+                        Description
+                        <i class="fa fa-indent"></i>
+                    </h3>
+                    <br>
+                    <p>
+                        @Model.Description
+                    </p>
+            </div>
+        </div>
+    </div>
+
+    <!-- ----- title------------- -->
+    <div class="small-container">
+        <div class="" style="margin-top: 70px; margin-left: 16px">
+            <h2 style="">Relate Products</h2>
+            <p>View More</p>
+        </div>
+    </div>
+
+    <!-- ---------------Products----------------- -->
+    <div class="small-container">
+
+        <div class="row">
+            <div class="col-4">
+                <img src="../MasterLayout/images/product-1.jpg">
+                <h4>Red Printed T-Shirt</h4>
+                <div class="rating">
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star-o"></i>
+                </div>
+                <p>$50.00</p>
+            </div>
+            <div class="col-4">
+                <img src="../MasterLayout/images/product-2.jpg">
+                <h4>Red Printed T-Shirt</h4>
+                <div class="rating">
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star-half-o"></i>
+                    <i class="fa fa-star-o"></i>
+                </div>
+                <p>$50.00</p>
+            </div>
+            <div class="col-4">
+                <img src="../MasterLayout/images/product-3.jpg">
+                <h4>Red Printed T-Shirt</h4>
+                <div class="rating">
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star-half-o"></i>
+                </div>
+                <p>$50.00</p>
+            </div>
+            <div class="col-4">
+                <img src="../MasterLayout/images/product-4.jpg">
+                <h4>Red Printed T-Shirt</h4>
+                <div class="rating">
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star-o"></i>
+                </div>
+                <p>$50.00</p>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-4">
+                <img src="../MasterLayout/images/product-5.jpg">
+                <h4>Red Printed T-Shirt</h4>
+                <div class="rating">
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star-o"></i>
+                </div>
+                <p>$50.00</p>
+            </div>
+            <div class="col-4">
+                <img src="../MasterLayout/images/product-6.jpg">
+                <h4>Red Printed T-Shirt</h4>
+                <div class="rating">
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star-half-o"></i>
+                    <i class="fa fa-star-o"></i>
+                </div>
+                <p>$50.00</p>
+            </div>
+            <div class="col-4">
+                <img src="../MasterLayout/images/product-7.jpg">
+                <h4>Red Printed T-Shirt</h4>
+                <div class="rating">
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star-half-o"></i>
+                </div>
+                <p>$50.00</p>
+            </div>
+            <div class="col-4">
+                <img src="../MasterLayout/images/product-8.jpg">
+                <h4>Red Printed T-Shirt</h4>
+                <div class="rating">
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star-o"></i>
+                </div>
+                <p>$50.00</p>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-4">
+                <img src="../MasterLayout/images/product-9.jpg">
+                <h4>Red Printed T-Shirt</h4>
+                <div class="rating">
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star-o"></i>
+                </div>
+                <p>$50.00</p>
+            </div>
+            <div class="col-4">
+                <img src="../MasterLayout/images/product-10.jpg">
+                <h4>Red Printed T-Shirt</h4>
+                <div class="rating">
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star-half-o"></i>
+                    <i class="fa fa-star-o"></i>
+                </div>
+                <p>$50.00</p>
+            </div>
+            <div class="col-4">
+                <img src="../MasterLayout/images/product-11.jpg">
+                <h4>Red Printed T-Shirt</h4>
+                <div class="rating">
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star-half-o"></i>
+                </div>
+                <p>$50.00</p>
+            </div>
+            <div class="col-4">
+                <img src="../MasterLayout/images/product-12.jpg">
+                <h4>Red Printed T-Shirt</h4>
+                <div class="rating">
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star-o"></i>
+                </div>
+                <p>$50.00</p>
+            </div>
+        </div>
+        <div class="page-btn">
+            <span>1</span>
+            <span>2</span>
+            <span>3</span>
+            <span>4</span>
+            <span>&#8594;</span>
+        </div>
+    </div>
+    <!-- ------------------- js for toggle menu-------------- -->
+    <script>
+        var MenuItems = document.getElementById("MenuItems");
+
+        MenuItems.style.maxHeight = "0px";
+
+        function menutoggle() {
+            if (MenuItems.style.maxHeight == "0px") {
+                MenuItems.style.maxHeight = "200px";
+            }
+            else {
+                MenuItems.style.maxHeight = "0px";
+            }
+        }
+
+    </script>
+
+    <!-- ------------------- JS for  product gallery------------------------         -->
+    <script>
+        var ProductImg = document.getElementById("productImg");
+        var SmallImg = document.getElementsByClassName("small-img");
+
+        SmallImg[0].onclick = function () {
+            ProductImg.src = SmallImg[0].src;
+        }
+        SmallImg[1].onclick = function () {
+            ProductImg.src = SmallImg[1].src;
+        }
+        SmallImg[2].onclick = function () {
+            ProductImg.src = SmallImg[2].src;
+        }
+        SmallImg[3].onclick = function () {
+            ProductImg.src = SmallImg[3].src;
+        }
+    </script>
+</body>
+</html>
+
+
+
+

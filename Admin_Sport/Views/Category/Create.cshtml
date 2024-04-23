@@ -1,0 +1,18 @@
+﻿@model Admin_Sport.Models.Categories
+@{
+    ViewData["Title"] = "Create";
+}
+
+<h3 style="margin-bottom: 30px">Thêm mới phòng ban</h3>
+<div class="container col-md-8 offset-1-md-2">
+    <form action="/Category/Create" method="post">
+        <div class="mb-3">
+            <label asp-for="Name">Tên sản phẩm</label>
+            <input asp-for="Name" placeholder="Tên sản phẩm" class="form-control" />
+        </div>
+        <div class="mb-3">
+            <input type="submit" value="Thêm" class="btn btn-primary">
+        </div>
+    </form>
+</div>
+
