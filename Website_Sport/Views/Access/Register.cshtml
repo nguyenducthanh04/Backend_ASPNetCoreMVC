@@ -1,0 +1,50 @@
+﻿
+@{
+    ViewData["Title"] = "Register";
+    Layout = "~/Views/Shared/MasterLayout.cshtml";
+}
+<link rel="stylesheet" href="../MasterLayout/style.css">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet">
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+<style>
+    .header {
+        /* Loại bỏ thuộc tính CSS cụ thể */
+        background: initial !important; /* Hoặc có thể sử dụng giá trị khác như 'unset' */
+    }
+</style>
+<div class="account-page">
+    <div class="container">
+        <div class="row">
+            <div class="col-2">
+                <img src="../MasterLayout/images/image1.png" width="100%">
+            </div>
+
+            <div class="col-2">
+                <div class="form-container">
+                    <div class="form-btn">
+                        <!-- <span onclick="login()">Login</span> -->
+                        <span onclick="register()">Register</span>
+                        <hr id="Indicator">
+                    </div>
+
+                    <!-- <form id="LoginForm">
+                        <input type="text" placeholder="Username">
+                        <input type="password" placeholder="Password">
+                        <button type="submit" class="btn">Login</button>
+                        <a href="">Forgot password</a> |
+                        <a href="">Register</a>
+                    </form> -->
+
+                    <form id="RegForm">
+                        <input type="text" placeholder="Username">
+                        <input type="email" placeholder="Email">
+                        <input type="password" placeholder="Password">
+                        <button type="submit" class="btn">Register</button>
+                    </form>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

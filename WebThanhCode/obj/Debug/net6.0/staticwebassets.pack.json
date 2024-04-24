@@ -3441,6 +3441,10 @@
       "PackagePath": "staticwebassets\\images\\WIN_20230417_15_53_09_Pro (2)_2562f383-37e6-413a-a7d3-954e6e0a99f9.jpg"
     },
     {
+      "Id": "C:\\C#_CNTT_1605\\Website_Sport\\WebThanhCode\\wwwroot\\images\\akaza_793964c4-4c1f-4aea-9f4b-3738f7cd0c1e.jpg",
+      "PackagePath": "staticwebassets\\images\\akaza_793964c4-4c1f-4aea-9f4b-3738f7cd0c1e.jpg"
+    },
+    {
       "Id": "C:\\C#_CNTT_1605\\Website_Sport\\WebThanhCode\\wwwroot\\images\\akaza_a37ee875-e6b7-40a9-9fb2-3fa8332ce8bc.jpg",
       "PackagePath": "staticwebassets\\images\\akaza_a37ee875-e6b7-40a9-9fb2-3fa8332ce8bc.jpg"
     },
@@ -3559,6 +3563,10 @@
     {
       "Id": "C:\\C#_CNTT_1605\\Website_Sport\\WebThanhCode\\wwwroot\\images\\giaybongda_0e1e0c52-178c-468b-9f96-fabd5851d2ee.webp",
       "PackagePath": "staticwebassets\\images\\giaybongda_0e1e0c52-178c-468b-9f96-fabd5851d2ee.webp"
+    },
+    {
+      "Id": "C:\\C#_CNTT_1605\\Website_Sport\\WebThanhCode\\wwwroot\\images\\giaybongda_c9e4adf1-49c1-444c-ab88-3ec53dd45f76.webp",
+      "PackagePath": "staticwebassets\\images\\giaybongda_c9e4adf1-49c1-444c-ab88-3ec53dd45f76.webp"
     },
     {
       "Id": "C:\\C#_CNTT_1605\\Website_Sport\\WebThanhCode\\wwwroot\\images\\giaycaulong_79ac4c02-6d14-4775-a24d-587fa90adab8.webp",

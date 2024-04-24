@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "ijYWArIMIkXsE3xccfyNBdlDJFCVtx21lvIUFljOBLU=",
+  "Hash": "DbqCp3P49tQOz37IB6q96vf7QqJ2ExzOoBKbSzKh11c=",
   "Source": "WebThanhCode",
   "BasePath": "_content/WebThanhCode",
   "Mode": "Default",
@@ -14365,6 +14365,23 @@
       "OriginalItemSpec": "wwwroot\\favicon.ico"
     },
     {
+      "Identity": "C:\\C#_CNTT_1605\\Website_Sport\\WebThanhCode\\wwwroot\\images\\akaza_793964c4-4c1f-4aea-9f4b-3738f7cd0c1e.jpg",
+      "SourceId": "WebThanhCode",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\C#_CNTT_1605\\Website_Sport\\WebThanhCode\\wwwroot\\",
+      "BasePath": "_content/WebThanhCode",
+      "RelativePath": "images/akaza_793964c4-4c1f-4aea-9f4b-3738f7cd0c1e.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\images\\akaza_793964c4-4c1f-4aea-9f4b-3738f7cd0c1e.jpg"
+    },
+    {
       "Identity": "C:\\C#_CNTT_1605\\Website_Sport\\WebThanhCode\\wwwroot\\images\\akaza_a37ee875-e6b7-40a9-9fb2-3fa8332ce8bc.jpg",
       "SourceId": "WebThanhCode",
       "SourceType": "Discovered",
@@ -15111,6 +15128,23 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\images\\giaybongda_0e1e0c52-178c-468b-9f96-fabd5851d2ee.webp"
+    },
+    {
+      "Identity": "C:\\C#_CNTT_1605\\Website_Sport\\WebThanhCode\\wwwroot\\images\\giaybongda_c9e4adf1-49c1-444c-ab88-3ec53dd45f76.webp",
+      "SourceId": "WebThanhCode",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\C#_CNTT_1605\\Website_Sport\\WebThanhCode\\wwwroot\\",
+      "BasePath": "_content/WebThanhCode",
+      "RelativePath": "images/giaybongda_c9e4adf1-49c1-444c-ab88-3ec53dd45f76.webp",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\images\\giaybongda_c9e4adf1-49c1-444c-ab88-3ec53dd45f76.webp"
     },
     {
       "Identity": "C:\\C#_CNTT_1605\\Website_Sport\\WebThanhCode\\wwwroot\\images\\giaycaulong_79ac4c02-6d14-4775-a24d-587fa90adab8.webp",

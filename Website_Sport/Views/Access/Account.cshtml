@@ -1,0 +1,54 @@
+﻿
+@{
+    ViewData["Title"] = "Account";
+    Layout = "~/Views/Shared/MasterLayout.cshtml";
+}
+@model Website_Sport.Models.User
+<link rel="stylesheet" href="../MasterLayout/style.css">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet">
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+<div class="account-info">
+    <h4>Thông tin cá nhân</h4>
+    <table class="table-info">
+        <thead>
+            <tr>
+                <th>Họ tên</th>
+                <th>Email</th>
+                <th>Address</th>
+                <th>Phone</th>
+
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>@Model.UserName</td>
+                <td>@Model.Email</td>
+                <td>@Model.Address</td>
+                <td>@Model.Phone</td>
+            </tr>
+        </tbody>
+    </table>
+    <h4>Lịch sử đơn hàng</h4>
+    <table class="table-info">
+        <thead>
+            <tr>
+                <th>Họ tên</th>
+                <th>Email</th>
+                <th>Address</th>
+                <th>Phone</th>
+
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Thanh</td>
+                <td>dducthanh04@gmail.com</td>
+                <td>Hưng Yên</td>
+                <td>0585762666</td>
+            </tr>
+        </tbody>
+    </table>
+    <a href="/logout" style="text-decoration: none; color: red">Logout</a>
+</div>
+

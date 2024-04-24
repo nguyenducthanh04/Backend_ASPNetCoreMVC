@@ -1,10 +1,13 @@
 ﻿@model Website_Sport.Models.Product
+@using Microsoft.AspNetCore.Http
 @{
     ViewData["Title"] = "Product-Detail";
     Layout = "~/Views/Shared/MasterLayout.cshtml";
     ShopTheThaoContext context = new ShopTheThaoContext();
     var idString = ViewContext.RouteData.Values["id"]?.ToString();
     int id;
+    var httpContextAccessor = Context.RequestServices.GetService(typeof(Microsoft.AspNetCore.Http.IHttpContextAccessor)) as Microsoft.AspNetCore.Http.IHttpContextAccessor;
+    var isLoggedIn = httpContextAccessor.HttpContext.Session.GetString("Email") != null;
 }
 
 <!DOCTYPE html>
@@ -47,16 +50,16 @@
                             {
                                 foreach (var image in images)
                                 {
-                                            <div class="small-img-rol">
+                                                <div class="small-img-rol">
 
-                                                <img src="http://localhost:5177/api/product@(image.Image1)" alt="Product Image" width="100%" class="small-img" />
-                                            </div>
+                                                    <img src="http://localhost:5177/api/product@(image.Image1)" alt="Product Image" width="100%" class="small-img" />
+                                                </div>
 
                                 }
                             }
                             else
                             {
-                                        <p>No images available</p>
+                                            <p>No images available</p>
                             }
                         }
                     }
@@ -72,12 +75,6 @@
                     var selectedColor = "";
 
                 }
-               @*  @foreach (var color in products.Select(p => p.Color).Distinct())
-                {
-                    <button class="colorButton" value="@color">@color</button>
-                } *@
-               @*  @if (hasNonZeroColor)
-                { *@
                     <select id="colorSelect">
                         <option>Chọn màu</option>
                         @foreach (var color in products.Select(p => p.Color).Distinct())
@@ -85,12 +82,6 @@
                                 <option value="@color">@color</option>
                         }
                     </select>
-             @*    } *@
-               
-
-              @*   <div id="productList">
-                    <!-- Placeholder for product list -->
-                </div> *@
                 <select id="sizeSelect">
                     <option>Select Size</option>
                 </select>
@@ -127,9 +118,6 @@
                                 })
                                 .then(data => {
                                     const sizeSelect = document.getElementById('sizeSelect');
-                                    // Kiểm tra nếu tất cả các kích thước đều bằng 0
-                                    // const allSizesZero = data.every(product => product.size === 0);
-                                    // if (!allSizesZero) {
                                         sizeSelect.innerHTML = ''; // Xóa nội dung cũ
                                         console.log(data);
                                         // Thêm tùy chọn "Select Size" vào đầu tiên
@@ -151,10 +139,6 @@
                                             // Sử dụng giá trị đã chọn ở đây, ví dụ:
                                             console.log("Selected size:", selectedSize);
                                         });
-                                    // } else {
-                                    //     // Nếu tất cả các kích thước đều bằng 0, ẩn thẻ <select>
-                                    //     sizeSelect.style.display = 'none';
-                                    // }
                                 })
                                 .catch(error => {
                                     console.error('There was an error with the fetch operation:', error);
@@ -163,8 +147,16 @@
                         });
                     });
                 </script>
-                    <input type="number" value="1">
-                    <a href="" class="btn">Add To Card</a>
+                    <input id="quantity-btn" type="number" value="1">
+
+                @if (isLoggedIn)
+                {
+                    <button class="btn" id="add-to-cart-btn" style="border: none">Add To Cart</button>
+                }
+                else
+                {
+                    <span class="btn disabled">Hãy Login</span>
+                }
                     <h3>
                         Description
                         <i class="fa fa-indent"></i>
@@ -176,7 +168,74 @@
             </div>
         </div>
     </div>
+    <script>
+        document.getElementById('add-to-cart-btn').addEventListener('click', function () {
+            const sizeSelect = document.getElementById('sizeSelect');
+            const selectedSize = sizeSelect.value; // Lấy giá trị của tùy chọn đã chọn
+            const colorSelected = document.getElementById('colorSelect')
+            const selectedColor = colorSelected.value;
+            const type = "@Model.Type"; // Lấy giá trị Type từ Razor
+            const typeElement = document.createElement('div');
+            typeElement.innerHTML = type;
+            const decodedType = typeElement.textContent;
+            const price = "@Model.Price";
+            const priceElement = document.createElement('div');
+            priceElement.innerHTML = price;
+            const decodedPrice = priceElement.textContent;
+            console.log("ok type:", decodedType);
+            console.log("ok price:", decodedPrice);
+            console.log("ok size:", selectedSize);
+            console.log("ok color:", selectedColor);
+            const quantityBtn = document.getElementById('quantity-btn');
+            const btnQuantity = quantityBtn.value;
+            console.log("ok quantity:", btnQuantity);
+            // Dữ liệu để gửi đến API action
+            const data = {
+                Type: decodedType,
+                Price: decodedPrice,
+                Size: selectedSize,
+                Color: selectedColor,
+                Quantity: btnQuantity,
+            };
+        
+            fetch('http://localhost:5177/add-to-cart', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify(data)
+            })
+                .then(response => {
+                    if (!response.ok) {
+                        throw new Error('Network response was not ok');
+                    }
+                    return response.json();
+                })
+                .then(result => {
+                    console.log('Response from server:', result);
+                    // Xử lý kết quả từ action nếu cần
+                })
+                .catch(error => {
+                    console.error('There was an error with the fetch operation:', error);
+                });
+            // const xhr = new XMLHttpRequest();
+            // xhr.open('POST', 'https://localhost:7082/add-to-cart', true); // Sử dụng đúng đường dẫn Route đã xác định trong Controller
+            // xhr.setRequestHeader('Content-Type', 'application/json'); // Sử dụng application/json cho Content-Type
+            // xhr.onreadystatechange = function () {
+            //     if (xhr.readyState === XMLHttpRequest.DONE) {
+            //         if (xhr.status === 200) {
+            //             console.log('Data added successfully');
+            //             // Xử lý logic sau khi dữ liệu đã được thêm vào giỏ hàng nếu cần
+            //         } else {
+            //             console.error('Error adding data');
+            //         }
+            //     }
+            // };
+            // xhr.send(JSON.stringify(data)); // Gửi dữ liệu dưới dạng chuỗi JSON
 
+        });
+
+    </script>
     <!-- ----- title------------- -->
     <div class="small-container">
         <div class="" style="margin-top: 70px; margin-left: 16px">

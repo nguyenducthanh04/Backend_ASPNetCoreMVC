@@ -12,8 +12,7 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
     <style>
     .header {
-        /* Loại bỏ thuộc tính CSS cụ thể */
-        background: initial !important; /* Hoặc có thể sử dụng giá trị khác như 'unset' */
+        background: initial !important;
     }
     </style>
     <div class="small-container">
@@ -32,13 +31,17 @@
         <div class="row">
         @foreach (var item in Model)
         {
-            <script>
-                console.log(@(item.Images.First().Image1))
-                </script>
+            
             <div class="col-4">
                 <a href="product-detail/@item.ProductId">
-                    <img src="http://localhost:5177/api/product@(item.Images.First().Image1)"
-                         alt="Product Image">
+                    @if (item.Images.Any())
+                    {
+                        <img src="http://localhost:5177/api/product@(item.Images.First().Image1)"
+                        alt="Product Image">
+                    } else
+                    {
+                        <h4 style="color: red">No images available!</h4>
+                    }
                     <h4>@item.Type</h4>
                     <div class="rating">
                         <i class="fa fa-star"></i>
