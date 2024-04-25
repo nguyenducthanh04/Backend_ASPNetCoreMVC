@@ -66,4 +66,9 @@ app.MapControllerRoute(
     pattern: "register",
     defaults: new { Controller = "Access", action = "Register" }
     );
+app.MapControllerRoute(
+    name: "cart",
+    pattern: "cart",
+    defaults: new { Controller = "Cart", action = "Index" }
+    );
 app.Run();

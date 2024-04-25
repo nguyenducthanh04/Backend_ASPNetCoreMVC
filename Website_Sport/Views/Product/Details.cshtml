@@ -50,16 +50,16 @@
                             {
                                 foreach (var image in images)
                                 {
-                                                <div class="small-img-rol">
+                                                    <div class="small-img-rol">
 
-                                                    <img src="http://localhost:5177/api/product@(image.Image1)" alt="Product Image" width="100%" class="small-img" />
-                                                </div>
+                                                        <img src="http://localhost:5177/api/product@(image.Image1)" alt="Product Image" width="100%" class="small-img" />
+                                                    </div>
 
                                 }
                             }
                             else
                             {
-                                            <p>No images available</p>
+                                 <p>No images available</p>
                             }
                         }
                     }
@@ -182,58 +182,49 @@
             const priceElement = document.createElement('div');
             priceElement.innerHTML = price;
             const decodedPrice = priceElement.textContent;
+
+            const quantityBtn = document.getElementById('quantity-btn');
+            const btnQuantity = quantityBtn.value;
+            const image = "http://localhost:5177/api/product@(Model.Images.First().Image1)";
+            console.log("imagee:", image);
             console.log("ok type:", decodedType);
             console.log("ok price:", decodedPrice);
             console.log("ok size:", selectedSize);
             console.log("ok color:", selectedColor);
-            const quantityBtn = document.getElementById('quantity-btn');
-            const btnQuantity = quantityBtn.value;
             console.log("ok quantity:", btnQuantity);
-            // Dữ liệu để gửi đến API action
-            const data = {
+            const product = {
                 Type: decodedType,
                 Price: decodedPrice,
                 Size: selectedSize,
                 Color: selectedColor,
-                Quantity: btnQuantity,
+                Image: image,
+                Quantity: parseInt(btnQuantity),
             };
-        
-            fetch('http://localhost:5177/add-to-cart', {
-                method: 'POST',
-                headers: {
-                    'Content-Type': 'application/json'
-                },
-                body: JSON.stringify(data)
-            })
-                .then(response => {
-                    if (!response.ok) {
-                        throw new Error('Network response was not ok');
-                    }
-                    return response.json();
-                })
-                .then(result => {
-                    console.log('Response from server:', result);
-                    // Xử lý kết quả từ action nếu cần
-                })
-                .catch(error => {
-                    console.error('There was an error with the fetch operation:', error);
-                });
-            // const xhr = new XMLHttpRequest();
-            // xhr.open('POST', 'https://localhost:7082/add-to-cart', true); // Sử dụng đúng đường dẫn Route đã xác định trong Controller
-            // xhr.setRequestHeader('Content-Type', 'application/json'); // Sử dụng application/json cho Content-Type
-            // xhr.onreadystatechange = function () {
-            //     if (xhr.readyState === XMLHttpRequest.DONE) {
-            //         if (xhr.status === 200) {
-            //             console.log('Data added successfully');
-            //             // Xử lý logic sau khi dữ liệu đã được thêm vào giỏ hàng nếu cần
-            //         } else {
-            //             console.error('Error adding data');
-            //         }
-            //     }
-            // };
-            // xhr.send(JSON.stringify(data)); // Gửi dữ liệu dưới dạng chuỗi JSON
-
+            console.log("Thanh test:", typeof btnQuantity)
+            addToCart(product);
+            console.log("Type quantity", typeof (product.Quantity));
         });
+
+        function addToCart(product) {
+            let cartItems = JSON.parse(localStorage.getItem('cart')) || [];
+
+            const existingProductIndex = cartItems.findIndex(item =>
+                item.Type === product.Type &&
+                item.Price === product.Price &&
+                item.Size === product.Size &&
+                item.Color === product.Color
+            );
+            console.log(product.Quantity);
+            if (existingProductIndex !== -1) {
+                cartItems[existingProductIndex].Quantity += parseInt(product.Quantity);
+                console.log("ktra type:", typeof (cartItems[existingProductIndex].Quantity))
+                console.log(typeof(parseInt(product.Quantity)))
+            } else {
+                cartItems.push(product);
+            }
+
+            localStorage.setItem('cart', JSON.stringify(cartItems));
+        }
 
     </script>
     <!-- ----- title------------- -->

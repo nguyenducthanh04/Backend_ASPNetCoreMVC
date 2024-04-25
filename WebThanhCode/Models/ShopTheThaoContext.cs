@@ -36,9 +36,7 @@ namespace WebThanhCode.Models
         {
             modelBuilder.Entity<Cart>(entity =>
             {
-                entity.Property(e => e.CreatedDate)
-                    .IsRowVersion()
-                    .IsConcurrencyToken();
+                entity.ToTable("Cart");
 
                 entity.Property(e => e.Price)
                     .HasMaxLength(30)
@@ -48,13 +46,13 @@ namespace WebThanhCode.Models
                     .WithMany(p => p.Carts)
                     .HasForeignKey(d => d.ProductId)
                     .OnDelete(DeleteBehavior.Cascade)
-                    .HasConstraintName("FK__Carts__ProductId__3D2915A8");
+                    .HasConstraintName("FK__Cart__ProductId__503BEA1C");
 
                 entity.HasOne(d => d.User)
                     .WithMany(p => p.Carts)
                     .HasForeignKey(d => d.UserId)
                     .OnDelete(DeleteBehavior.Cascade)
-                    .HasConstraintName("FK__Carts__UserId__3C34F16F");
+                    .HasConstraintName("FK__Cart__UserId__4F47C5E3");
             });
 
             modelBuilder.Entity<Category>(entity =>

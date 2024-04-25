@@ -1,0 +1,265 @@
+﻿
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/Shared/MasterLayout.cshtml";
+}
+<link rel="stylesheet" href="../MasterLayout/style.css">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet">
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+<style>
+    .header {
+        background: initial !important; 
+    }
+</style>
+@* <div class="small-container cart-page">
+    <table>
+        <tr>
+            <th>Product</th>
+            <th>Quantity</th>
+            <th>Subtotal</th>
+        </tr>
+        <tr>
+            <td>
+                <div class="cart-info">
+                    <img src="images/buy-1.jpg">
+                    <div>
+                        <p>Red Printed Tshirt</p>
+                        <small>Price: $50.00</small>
+                        <br>
+                        <a href="">Remove</a>
+                    </div>
+                </div>
+            </td>
+            <td><input type="number" value="1"></td>
+            <td>$50.00</td>
+        </tr>
+        <tr>
+            <td>
+                <div class="cart-info">
+                    <img src="images/buy-2.jpg">
+                    <div>
+                        <p>Red Printed Tshirt</p>
+                        <small>Price: $75.00</small>
+                        <br>
+                        <a href="">Remove</a>
+                    </div>
+                </div>
+            </td>
+            <td><input type="number" value="1"></td>
+            <td>$75.00</td>
+        </tr>
+        <tr>
+            <td>
+                <div class="cart-info">
+                    <img src="images/buy-3.jpg">
+                    <div>
+                        <p>Red Printed Tshirt</p>
+                        <small>Price: $50.00</small>
+                        <br>
+                        <a href="">Remove</a>
+                    </div>
+                </div>
+            </td>
+            <td><input type="number" value="1"></td>
+            <td>$50.00</td>
+        </tr>
+    </table>
+
+    <div class="total-price">
+        <table>
+            <tr>
+                <td>Subtotal</td>
+                <td>175.000$</td>
+            </tr>
+            <tr>
+                <td>Tax</td>
+                <td>25.00$</td>
+            </tr>
+            <tr>
+                <td>Total</td>
+                <td>200.000$</td>
+            </tr>
+        </table>
+
+    </div>
+
+
+</div> *@
+<div class="small-container cart-page">
+    <table>
+        <thead>
+            <tr>
+                <th>Product</th> 
+                <th>Color</th> 
+                <th>Size</th>
+                <th>Quantity</th>
+                <th>Subtotal</th>
+            </tr>
+        </thead>
+        <tbody>
+            <!-- Product rows will be added here dynamically -->
+        </tbody>
+    </table>
+
+    <div class="total-price">
+        <table>
+            <tr>
+                <td>Subtotal</td>
+                <td>$0.00</td>
+            </tr>
+            <tr>
+                <td>Tax</td>
+                <td>$0.00</td>
+            </tr>
+            <tr>
+                <td>Total</td>
+                <td>$0.00</td>
+            </tr>
+        </table>
+    </div>
+</div>
+
+<script>
+    // Lấy dữ liệu từ localStorage
+    const cartItems = JSON.parse(localStorage.getItem('cart')) || [];
+
+    // Lặp qua mỗi sản phẩm trong giỏ hàng
+    cartItems.forEach(item => {
+        // Tạo một hàng mới trong bảng
+        const row = document.createElement('tr');
+
+        // Tạo cột cho thông tin sản phẩm
+        const productCell = document.createElement('td');
+        const productInfo = document.createElement('div');
+        productInfo.classList.add('cart-info');
+        productInfo.innerHTML = `
+                <img src="${item.Image}">
+            <div>
+                    <p>${item.Type}</p>
+                    <small>Price: $${item.Price}</small>
+                <br>
+                      <a class="remove-btn" style="cursor:pointer">Remove</a>
+            </div>
+        `;
+        productCell.appendChild(productInfo);
+        row.appendChild(productCell);
+        // Tạo cột Color
+        const Color = document.createElement('td');
+        Color.textContent = `${item.Color}`;
+        row.appendChild(Color);
+        // Tạo cột Size
+        const Size = document.createElement('td');
+        Size.textContent = `${item.Size}`;
+        row.appendChild(Size);
+        // Tạo cột cho input số lượng
+        const quantityCell = document.createElement('td');
+        const quantityInput = document.createElement('input');
+        quantityInput.type = 'number';
+        quantityInput.value = `${item.Quantity}`;
+        quantityCell.appendChild(quantityInput);
+        row.appendChild(quantityCell);
+
+        // Tạo cột cho subtotal
+        const subtotalCell = document.createElement('td');
+        const subtotal = item.price * item.quantity;
+        subtotalCell.textContent = `$${item.Price}`;
+        row.appendChild(subtotalCell);   
+     
+
+        // Thêm hàng vào bảng
+        document.querySelector('.cart-page table tbody').appendChild(row);
+    });
+
+    // Tính tổng số tiền
+    const subtotal = cartItems.reduce((acc, item) => acc + (item.price * item.quantity), 0);
+    const tax = 0.1 * subtotal; // Giả sử thuế là 10%
+    const total = subtotal + tax;
+
+    // Hiển thị tổng số tiền
+    document.querySelector('.total-price table tr:nth-child(1) td:nth-child(2)').textContent = `$${subtotal.toFixed(2)}`;
+    document.querySelector('.total-price table tr:nth-child(2) td:nth-child(2)').textContent = `$${tax.toFixed(2)}`;
+    document.querySelector('.total-price table tr:nth-child(3) td:nth-child(2)').textContent = `$${total.toFixed(2)}`;
+    // Hàm xóa sản phẩm dựa trên Type, Color, Size
+    function removeItemsByAttributes(type, color, size) {
+        // Lấy dữ liệu từ localStorage
+        let cartItems = JSON.parse(localStorage.getItem('cart')) || [];
+
+        // Lọc ra các mục không phù hợp và giữ lại các mục phù hợp
+        cartItems = cartItems.filter(item => {
+            return item.Type !== type || item.Color !== color || item.Size !== size;
+        });
+
+        // Cập nhật localStorage với các mục đã lọc
+        localStorage.setItem('cart', JSON.stringify(cartItems));
+
+        // Cập nhật giao diện
+        updateCartDisplay();
+    }
+
+    // Hàm cập nhật giao diện
+    function updateCartDisplay() {
+        // Làm mới danh sách sản phẩm trong giỏ hàng
+        const cartTableBody = document.querySelector('.cart-page table tbody');
+        cartTableBody.innerHTML = '';
+
+        // Lấy dữ liệu từ localStorage
+        const cartItems = JSON.parse(localStorage.getItem('cart')) || [];
+
+        // Hiển thị các sản phẩm trong giỏ hàng
+        cartItems.forEach(item => {
+            // Tạo hàng mới trong bảng
+            const row = document.createElement('tr');
+
+            // Tạo cột cho thông tin sản phẩm
+            const productCell = document.createElement('td');
+            const productInfo = document.createElement('div');
+            productInfo.classList.add('cart-info');
+            productInfo.innerHTML = `
+                    <img src="${item.Image}">
+                <div>
+                        <p>${item.Type}</p>
+                        <small>Price: $${item.Price}</small>
+                    <br>
+                      <a class="remove-btn" style="cursor-pointer">Remove</a>
+                </div>
+            `;
+            productCell.appendChild(productInfo);
+            row.appendChild(productCell);
+            // Tạo cột Color
+            const Color = document.createElement('td');
+            Color.textContent = `${item.Color}`;
+            row.appendChild(Color);
+            // Tạo cột Size
+            const Size = document.createElement('td');
+            Size.textContent = `${item.Size}`;
+            row.appendChild(Size);
+            // Tạo cột cho input số lượng
+            const quantityCell = document.createElement('td');
+            const quantityInput = document.createElement('input');
+            quantityInput.type = 'number';
+            quantityInput.value = `${item.Quantity}`;
+            quantityCell.appendChild(quantityInput);
+            row.appendChild(quantityCell);
+
+
+            // Tạo cột cho subtotal
+            const subtotalCell = document.createElement('td');
+            const subtotal = item.price * item.quantity;
+            subtotalCell.textContent = `$${item.Price}`;
+            row.appendChild(subtotalCell);
+
+            // Thêm hàng vào bảng
+            cartTableBody.appendChild(row);
+
+            // Sự kiện click vào nút "Remove"
+            const removeBtn = productInfo.querySelector('.remove-btn');
+            removeBtn.addEventListener('click', () => {
+                removeItemsByAttributes(item.Type, item.Color, item.Size);
+            });
+        });
+    }
+
+    // Gọi hàm cập nhật giao diện khi trang được tải
+    updateCartDisplay();
+</script>
