@@ -1,0 +1,36 @@
+﻿
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/Shared/_LayoutAdmin.cshtml";
+}
+@model List<WebThanhCode.Models.User>
+<h5 style="text-align: center">Danh sách người dùng</h5>
+<div class="container">
+    <table class="table table-bordered">
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>Email</th>
+                <th>Address</th>
+                <th>Phone</th>
+                <th>Position</th>
+                <th>Edit</th>
+                <th>Delete</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach(var user in Model) {
+                <tr>
+                    <td>@user.UserName</td>
+                    <td>@user.Email</td>
+                    <td>@user.Address</td>
+                    <td>@user.Phone</td>
+                    <td>@user.Position.PositionName</td>
+                    <td><a href="/edit-user/@user.UserId" class="btn btn-warning">Edit</a></td>
+                    <td><a href="/delete-user/@user.UserId" class="btn btn-danger">Delete</a></td>
+                </tr>
+            }
+        </tbody>
+    </table>
+</div>
+

@@ -476,6 +476,7 @@ form a{
 .table-info tr:nth-child(even) {
         background-color: #f9f9f9; /* Lighter gray background for even rows */
 }
+
 /* --------------- Media query FOR menu -------------- */
 @media only screen and (max-width: 800px) {
     nav ul{

@@ -41,7 +41,7 @@
             <input asp-for="Saled" placeholder="Đã bán" class="form-control" />
         </div>
         <div class="mb-3">
-            <label asp-for="CategoryId">Loai</label>
+            <label asp-for="CategoryId">Loại</label>
             <select class="form-control" name="CategoryId">
                 @foreach (var cate in context.Categories.ToList())
                 {

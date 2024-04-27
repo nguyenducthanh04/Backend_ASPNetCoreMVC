@@ -63,4 +63,24 @@ app.MapControllerRoute(
     pattern: "delete-prd/{id?}",
     defaults: new { Controller = "Product", action = "Delete" }
     );
+app.MapControllerRoute(
+    name: "list-user",
+    pattern: "list-user",
+    defaults: new { Controller = "User", action = "Index" }
+    );
+app.MapControllerRoute(
+    name: "create-user",
+    pattern: "create-user",
+    defaults: new { Controller = "User", action = "Create" }
+    );
+app.MapControllerRoute(
+    name: "edit-user",
+    pattern: "edit-user/{id?}",
+    defaults: new { Controller = "User", action = "Edit" }
+    );
+app.MapControllerRoute(
+    name: "delete-user",
+    pattern: "delete-user/{id?}",
+    defaults: new { Controller = "User", action = "Delete" }
+    );
 app.Run();

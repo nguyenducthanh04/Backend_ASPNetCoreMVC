@@ -12,80 +12,6 @@
         background: initial !important; 
     }
 </style>
-@* <div class="small-container cart-page">
-    <table>
-        <tr>
-            <th>Product</th>
-            <th>Quantity</th>
-            <th>Subtotal</th>
-        </tr>
-        <tr>
-            <td>
-                <div class="cart-info">
-                    <img src="images/buy-1.jpg">
-                    <div>
-                        <p>Red Printed Tshirt</p>
-                        <small>Price: $50.00</small>
-                        <br>
-                        <a href="">Remove</a>
-                    </div>
-                </div>
-            </td>
-            <td><input type="number" value="1"></td>
-            <td>$50.00</td>
-        </tr>
-        <tr>
-            <td>
-                <div class="cart-info">
-                    <img src="images/buy-2.jpg">
-                    <div>
-                        <p>Red Printed Tshirt</p>
-                        <small>Price: $75.00</small>
-                        <br>
-                        <a href="">Remove</a>
-                    </div>
-                </div>
-            </td>
-            <td><input type="number" value="1"></td>
-            <td>$75.00</td>
-        </tr>
-        <tr>
-            <td>
-                <div class="cart-info">
-                    <img src="images/buy-3.jpg">
-                    <div>
-                        <p>Red Printed Tshirt</p>
-                        <small>Price: $50.00</small>
-                        <br>
-                        <a href="">Remove</a>
-                    </div>
-                </div>
-            </td>
-            <td><input type="number" value="1"></td>
-            <td>$50.00</td>
-        </tr>
-    </table>
-
-    <div class="total-price">
-        <table>
-            <tr>
-                <td>Subtotal</td>
-                <td>175.000$</td>
-            </tr>
-            <tr>
-                <td>Tax</td>
-                <td>25.00$</td>
-            </tr>
-            <tr>
-                <td>Total</td>
-                <td>200.000$</td>
-            </tr>
-        </table>
-
-    </div>
-
-
-</div> *@
 <div class="small-container cart-page">
     <table>
         <thead>
@@ -106,17 +32,17 @@
         <table>
             <tr>
                 <td>Subtotal</td>
-                <td>$0.00</td>
-            </tr>
-            <tr>
-                <td>Tax</td>
-                <td>$0.00</td>
-            </tr>
-            <tr>
-                <td>Total</td>
-                <td>$0.00</td>
+                <td>0</td>
             </tr>
         </table>
+    </div>
+    <div class="pay">
+        <a style=" width: 180px;
+    height: 40px;
+    background-color: #ff523b;
+    color: #fff; border: none; cursor:pointer" href="/payment">
+            Thanh toán
+        </a>
     </div>
 </div>
 
@@ -154,16 +80,14 @@
         row.appendChild(Size);
         // Tạo cột cho input số lượng
         const quantityCell = document.createElement('td');
-        const quantityInput = document.createElement('input');
-        quantityInput.type = 'number';
-        quantityInput.value = `${item.Quantity}`;
-        quantityCell.appendChild(quantityInput);
+        quantityCell.textContent = `${item.Quantity}`;
         row.appendChild(quantityCell);
 
         // Tạo cột cho subtotal
         const subtotalCell = document.createElement('td');
-        const subtotal = item.price * item.quantity;
-        subtotalCell.textContent = `$${item.Price}`;
+        const subtotal = `${item.Price}` * `${item.Quantity}`;
+        console.log("Tổng giá: ", subtotal)
+        subtotalCell.textContent = `${subtotal}`;
         row.appendChild(subtotalCell);   
      
 
@@ -171,47 +95,34 @@
         document.querySelector('.cart-page table tbody').appendChild(row);
     });
 
-    // Tính tổng số tiền
-    const subtotal = cartItems.reduce((acc, item) => acc + (item.price * item.quantity), 0);
-    const tax = 0.1 * subtotal; // Giả sử thuế là 10%
-    const total = subtotal + tax;
-
-    // Hiển thị tổng số tiền
-    document.querySelector('.total-price table tr:nth-child(1) td:nth-child(2)').textContent = `$${subtotal.toFixed(2)}`;
-    document.querySelector('.total-price table tr:nth-child(2) td:nth-child(2)').textContent = `$${tax.toFixed(2)}`;
-    document.querySelector('.total-price table tr:nth-child(3) td:nth-child(2)').textContent = `$${total.toFixed(2)}`;
-    // Hàm xóa sản phẩm dựa trên Type, Color, Size
+    // // Tính tổng số tiền
+     const subtotal = cartItems.reduce((acc, item) => acc + (item.Price * item.Quantity), 0);
+    // // Hiển thị tổng số tiền
+    document.querySelector('.total-price table tr:nth-child(1) td:nth-child(2)').textContent = `${subtotal}`;
+    console.log("Tổngg:", `$${subtotal}`)
     function removeItemsByAttributes(type, color, size) {
-        // Lấy dữ liệu từ localStorage
         let cartItems = JSON.parse(localStorage.getItem('cart')) || [];
-
-        // Lọc ra các mục không phù hợp và giữ lại các mục phù hợp
         cartItems = cartItems.filter(item => {
             return item.Type !== type || item.Color !== color || item.Size !== size;
         });
-
-        // Cập nhật localStorage với các mục đã lọc
         localStorage.setItem('cart', JSON.stringify(cartItems));
-
-        // Cập nhật giao diện
         updateCartDisplay();
+        updateTotalPrice();
     }
 
-    // Hàm cập nhật giao diện
+    function updateTotalPrice() {
+        const cartItems = JSON.parse(localStorage.getItem('cart')) || [];
+        const subtotal = cartItems.reduce((acc, item) => acc + (item.Price * item.Quantity), 0);
+        document.querySelector('.total-price table tr:nth-child(1) td:nth-child(2)').textContent = `${subtotal}`;
+    }
     function updateCartDisplay() {
-        // Làm mới danh sách sản phẩm trong giỏ hàng
         const cartTableBody = document.querySelector('.cart-page table tbody');
         cartTableBody.innerHTML = '';
 
-        // Lấy dữ liệu từ localStorage
         const cartItems = JSON.parse(localStorage.getItem('cart')) || [];
-
-        // Hiển thị các sản phẩm trong giỏ hàng
         cartItems.forEach(item => {
-            // Tạo hàng mới trong bảng
             const row = document.createElement('tr');
 
-            // Tạo cột cho thông tin sản phẩm
             const productCell = document.createElement('td');
             const productInfo = document.createElement('div');
             productInfo.classList.add('cart-info');
@@ -236,17 +147,14 @@
             row.appendChild(Size);
             // Tạo cột cho input số lượng
             const quantityCell = document.createElement('td');
-            const quantityInput = document.createElement('input');
-            quantityInput.type = 'number';
-            quantityInput.value = `${item.Quantity}`;
-            quantityCell.appendChild(quantityInput);
+            quantityCell.textContent = `${item.Quantity}`;
             row.appendChild(quantityCell);
-
 
             // Tạo cột cho subtotal
             const subtotalCell = document.createElement('td');
-            const subtotal = item.price * item.quantity;
-            subtotalCell.textContent = `$${item.Price}`;
+            const subtotal = `${item.Price}` * `${item.Quantity}`;
+            console.log("Tổng giá: ", subtotal)
+            subtotalCell.textContent = `${subtotal}`;
             row.appendChild(subtotalCell);
 
             // Thêm hàng vào bảng
@@ -256,6 +164,7 @@
             const removeBtn = productInfo.querySelector('.remove-btn');
             removeBtn.addEventListener('click', () => {
                 removeItemsByAttributes(item.Type, item.Color, item.Size);
+                location.reload();
             });
         });
     }

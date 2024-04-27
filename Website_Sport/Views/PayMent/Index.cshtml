@@ -1,0 +1,62 @@
+﻿
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/Shared/MasterLayout.cshtml";
+}
+<link rel="stylesheet" href="../MasterLayout/StylePayMent.css" />
+<div class="wrapper">
+    <div class="container-payment">
+        <h3>THÔNG TIN GIAO HÀNG</h3>
+        <form action="#">
+            <div class="row">
+                <label for="name">Họ Và Tên:</label>
+                <input type="text" id="name" name="name" required />
+            </div>
+
+            <div class="row">
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required />
+            </div>
+
+            <div class="row">
+                <label for="phone">Số Điện Thoại:</label>
+                <input type="tel" id="phone" name="phone" required />
+            </div>
+
+            <div class="row">
+                <label for="address">Địa Chỉ:</label>
+                <input type="text" placeholder="Địa chỉ" required />
+            </div>
+            <h3>PHƯƠNG THỨC THANH TOÁN</h3>
+            <div class="payment-methods">
+                <div class="method">
+                    <input type="radio" id="cod" name="payment" value="cod" checked />
+                    <label for="cod">Thanh toán khi nhận hàng (COD)</label>
+                </div>
+            </div>
+            <button type="submit">Đặt Hàng</button>
+        </form>
+    </div>
+    <div class="info-product">
+        <div class="container-product">
+            <div class="product-image">
+                <img src="https://cdn.ssstutter.com/products/66z6ao28eNQDG839/042024/1712992746877.webp"
+                     alt="Tên sản phẩm" />
+            </div>
+
+            <div class="product-info">
+                <h2>Tên sản phẩm</h2>
+                <p class="price">499.000đ</p>
+                <p class="description">Mô tả chi tiết sản phẩm</p>
+
+                <div class="product-options">
+                    <label for="size">Kích thước: M</label>
+                    <label for="color">Màu sắc: Trắng</label>
+                    <label for="quantity">Số lượng: 3</label>
+                </div>
+            </div>
+        </div>
+        <hr style="margin-left: 50px" />
+    </div>
+</div>
+

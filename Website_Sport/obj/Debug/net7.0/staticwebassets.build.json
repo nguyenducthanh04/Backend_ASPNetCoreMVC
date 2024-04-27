@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "4GebtjenHKj4kP412nSxkY+IX3/7kMsEWxjpZhp5CmU=",
+  "Hash": "wbqabt+VXU29WOQtf5fr/c9ya5YP338i6RaC7Lb+QDg=",
   "Source": "Website_Sport",
   "BasePath": "_content/Website_Sport",
   "Mode": "Default",
@@ -2259,6 +2259,23 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\MasterLayout\\style.css"
+    },
+    {
+      "Identity": "C:\\C#_CNTT_1605\\Website_Sport\\Website_Sport\\wwwroot\\MasterLayout\\StylePayMent.css",
+      "SourceId": "Website_Sport",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\C#_CNTT_1605\\Website_Sport\\Website_Sport\\wwwroot\\",
+      "BasePath": "_content/Website_Sport",
+      "RelativePath": "MasterLayout/StylePayMent.css",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\MasterLayout\\StylePayMent.css"
     }
   ]
 }

@@ -50,11 +50,9 @@
                             {
                                 foreach (var image in images)
                                 {
-                                                    <div class="small-img-rol">
-
-                                                        <img src="http://localhost:5177/api/product@(image.Image1)" alt="Product Image" width="100%" class="small-img" />
-                                                    </div>
-
+                                   <div class="small-img-rol">
+                                   <img src="http://localhost:5177/api/product@(image.Image1)" alt="Product Image" width="100%" class="small-img" />
+                                    </div>
                                 }
                             }
                             else
@@ -69,7 +67,7 @@
             <div class="col-2">
                 <p>Home / T-Shirt</p>
                 <h1>@Model.Type</h1>
-                <h4>@Model.Price</h4>
+                <h4>@Model.Price ₫</h4>
                 @{
                     var products = context.Products.Where(p => p.Type == Model.Type).ToList();
                     var selectedColor = "";
@@ -186,12 +184,6 @@
             const quantityBtn = document.getElementById('quantity-btn');
             const btnQuantity = quantityBtn.value;
             const image = "http://localhost:5177/api/product@(Model.Images.First().Image1)";
-            console.log("imagee:", image);
-            console.log("ok type:", decodedType);
-            console.log("ok price:", decodedPrice);
-            console.log("ok size:", selectedSize);
-            console.log("ok color:", selectedColor);
-            console.log("ok quantity:", btnQuantity);
             const product = {
                 Type: decodedType,
                 Price: decodedPrice,
@@ -200,9 +192,7 @@
                 Image: image,
                 Quantity: parseInt(btnQuantity),
             };
-            console.log("Thanh test:", typeof btnQuantity)
             addToCart(product);
-            console.log("Type quantity", typeof (product.Quantity));
         });
 
         function addToCart(product) {
@@ -217,12 +207,11 @@
             console.log(product.Quantity);
             if (existingProductIndex !== -1) {
                 cartItems[existingProductIndex].Quantity += parseInt(product.Quantity);
-                console.log("ktra type:", typeof (cartItems[existingProductIndex].Quantity))
-                console.log(typeof(parseInt(product.Quantity)))
             } else {
                 cartItems.push(product);
             }
-
+            alert("Thêm thành công vào giỏ hàng!");
+            location.reload();
             localStorage.setItem('cart', JSON.stringify(cartItems));
         }
 

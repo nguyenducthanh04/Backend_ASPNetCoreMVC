@@ -71,4 +71,9 @@ app.MapControllerRoute(
     pattern: "cart",
     defaults: new { Controller = "Cart", action = "Index" }
     );
+app.MapControllerRoute(
+    name: "payment",
+    pattern: "payment",
+    defaults: new { Controller = "PayMent", action = "Index" }
+    );
 app.Run();

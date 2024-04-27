@@ -1,0 +1,40 @@
+﻿
+@{
+    ViewData["Title"] = "Edit";
+    Layout = "~/Views/Shared/_LayoutAdmin.cshtml";
+    ShopTheThaoContext context = new ShopTheThaoContext();
+}
+@model WebThanhCode.Models.User
+<h5 style="margin-bottom: 30px;">Sửa người dùng</h5>
+<div class="container">
+    <form asp-action="Edit" method="post">
+        <div class="mb-3">
+            <input asp-for="UserName" placeholder="UserName" class="form-control" />
+        </div>
+        <div class="mb-3">
+            <input asp-for="Email" placeholder="Email" class="form-control" />
+        </div>
+        <div class="mb-3">
+            <input asp-for="Password" placeholder="Password" class="form-control" />
+        </div>
+        <div class="mb-3">
+            <input asp-for="Address" placeholder="Address" class="form-control" />
+        </div>
+        <div class="mb-3">
+            <input asp-for="Phone" placeholder="Phone" class="form-control" />
+        </div>
+        <div class="mb-3">
+            <label asp-for="PositionId">Chức vụ</label>
+            <select class="form-control" name="PositionId">
+                @foreach (var po in context.Positions.ToList())
+                {
+                    <option value="@po.PositionId">@po.PositionName</option>
+                }
+            </select>
+        </div>
+        <div class="mb-3">
+            <button type="submit" class="btn btn-info">Save</button>
+        </div>
+    </form>
+</div>
+

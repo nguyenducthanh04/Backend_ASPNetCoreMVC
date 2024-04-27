@@ -5,9 +5,7 @@ VisualStudioVersion = 17.7.34018.315
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Website_Sport", "Website_Sport\Website_Sport.csproj", "{C130309C-7A98-434A-86AF-EDBC5E95542B}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WebByThanhNguyen", "WebByThanhNguyen\WebByThanhNguyen.csproj", "{0391F21E-4A1B-49AF-A2FE-0A9EDA9B7692}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebThanhCode", "WebThanhCode\WebThanhCode.csproj", "{96DD47E0-BFE0-4FBB-AEE0-6189BD1D83CA}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WebThanhCode", "WebThanhCode\WebThanhCode.csproj", "{96DD47E0-BFE0-4FBB-AEE0-6189BD1D83CA}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -19,10 +17,6 @@ Global
 		{C130309C-7A98-434A-86AF-EDBC5E95542B}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{C130309C-7A98-434A-86AF-EDBC5E95542B}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{C130309C-7A98-434A-86AF-EDBC5E95542B}.Release|Any CPU.Build.0 = Release|Any CPU
-		{0391F21E-4A1B-49AF-A2FE-0A9EDA9B7692}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{0391F21E-4A1B-49AF-A2FE-0A9EDA9B7692}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{0391F21E-4A1B-49AF-A2FE-0A9EDA9B7692}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{0391F21E-4A1B-49AF-A2FE-0A9EDA9B7692}.Release|Any CPU.Build.0 = Release|Any CPU
 		{96DD47E0-BFE0-4FBB-AEE0-6189BD1D83CA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{96DD47E0-BFE0-4FBB-AEE0-6189BD1D83CA}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{96DD47E0-BFE0-4FBB-AEE0-6189BD1D83CA}.Release|Any CPU.ActiveCfg = Release|Any CPU

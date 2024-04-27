@@ -5,6 +5,10 @@
       "PackagePath": "staticwebassets\\Website_Sport.bundle.scp.css"
     },
     {
+      "Id": "C:\\C#_CNTT_1605\\Website_Sport\\Website_Sport\\wwwroot\\MasterLayout\\StylePayMent.css",
+      "PackagePath": "staticwebassets\\MasterLayout\\StylePayMent.css"
+    },
+    {
       "Id": "C:\\C#_CNTT_1605\\Website_Sport\\Website_Sport\\wwwroot\\MasterLayout\\images\\adidas.png",
       "PackagePath": "staticwebassets\\MasterLayout\\images\\adidas.png"
     },
