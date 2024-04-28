@@ -13,7 +13,6 @@ namespace Website_Sport.Controllers
         {
             if (HttpContext.Session.GetString("Email") != null)
             {
-                // Nếu đã đăng nhập, truy xuất thông tin người dùng từ cơ sở dữ liệu
                 var userEmail = HttpContext.Session.GetString("Email");
                 var user = context.Users.FirstOrDefault(u => u.Email == userEmail);
                 return View(user);

@@ -1,0 +1,103 @@
+﻿
+@{
+    ViewData["Title"] = "Pay";
+    Layout = "~/Views/Shared/MasterLayout.cshtml";
+}
+@model Website_Sport.Models.User
+<link rel="stylesheet" href="../MasterLayout/StylePayMent.css"/>
+<div class="wrapper">
+    <div class="container-payment">
+        <h3>THÔNG TIN GIAO HÀNG</h3>
+        <section action="#">
+            <div class="row">
+                <label for="name" style=" margin-left: -53px;margin-top: 12px;">Họ Và Tên:</label>
+                <span>@Model.UserName</span>
+            </div>
+
+            <div class="row">
+                <label for="email" style="margin-left: -48px">Email:</label>
+                <span>@Model.Email</span>
+            </div>
+
+            <div class="row">
+                <label for="phone" style="margin-left: -67px;">Số Điện Thoại:</label>
+                <span>@Model.Phone</span>
+            </div>
+
+            <div class="row">
+                <label for="address" style="margin-left: -88px;">Địa Chỉ:</label>
+                <span>@Model.Address</span>
+            </div>
+            <h3>PHƯƠNG THỨC THANH TOÁN</h3>
+            <div class="payment-methods">
+                <div class="method">
+                    <label for="cod">Thanh toán khi nhận hàng (COD)</label>
+                </div>
+            </div>
+            <button id="btn" style="width: 70px; height: 30px; background-color: #58D68D; color: #fff; border: none; cursor: pointer">Đặt Hàng</button>
+        </section>
+    </div>
+    <div class="info-product" id="product-container">
+        <div class="container-product">
+        </div>
+    </div> 
+</div>
+<script>
+    var products = JSON.parse(localStorage.getItem('cart'));
+
+    var productContainer = document.getElementById('product-container');
+
+    if (products && products.length > 0) {
+        productContainer.innerHTML = '';
+
+        products.forEach(function (product) {
+            var html = `
+                     <div class="container-product">
+                        <div class="product-image">
+                            <img src="${product.Image}" alt="${product.Type}" />
+                        </div>
+                        <div class="product-info">
+                            <h2>${product.Type}</h2>
+                            <p class="price">${product.Price}đ</p>
+                            <div class="product-options">
+                                <label for="size">Kích thước: ${product.Size}</label>
+                                <label for="color">Màu sắc: ${product.Color}</label>
+                                <label for="quantity">Số lượng: ${product.Quantity}</label>
+                            </div>
+                        </div>
+                        </div>
+                     <hr style="margin-left: 50px" />
+                `;
+
+            productContainer.innerHTML += html;
+        });
+    } else {
+        productContainer.innerHTML = '<p>Không có sản phẩm trong giỏ hàng</p>';
+    }
+
+</script>
+
+<script>
+    document.getElementById('btn').addEventListener('click', function () {
+        var products = JSON.parse(localStorage.getItem('cart'));
+        var requestBody = JSON.stringify(products);
+        fetch('https://localhost:7082/api-post-data', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            body: requestBody
+        })
+            .then(response => {
+                if (!response.ok) {
+                    throw new Error('Failed to send data to server');
+                }
+                localStorage.removeItem('cart');
+                window.location.href = "https://localhost:7082/ordersuccess";
+                console.log('Data sent to server successfully');
+            })
+            .catch(error => {
+                console.error('Error occurred:', error);
+            });
+    });
+</script>

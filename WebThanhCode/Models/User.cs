@@ -7,7 +7,7 @@ namespace WebThanhCode.Models
     {
         public User()
         {
-            Carts = new HashSet<Cart>();
+            Orders = new HashSet<Order>();
         }
 
         public int UserId { get; set; }
@@ -19,6 +19,6 @@ namespace WebThanhCode.Models
         public int PositionId { get; set; }
 
         public virtual Position Position { get; set; } = null!;
-        public virtual ICollection<Cart> Carts { get; set; }
+        public virtual ICollection<Order> Orders { get; set; }
     }
 }

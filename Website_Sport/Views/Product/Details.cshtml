@@ -8,6 +8,7 @@
     int id;
     var httpContextAccessor = Context.RequestServices.GetService(typeof(Microsoft.AspNetCore.Http.IHttpContextAccessor)) as Microsoft.AspNetCore.Http.IHttpContextAccessor;
     var isLoggedIn = httpContextAccessor.HttpContext.Session.GetString("Email") != null;
+    var checkQuantity = Model.Quantity;
 }
 
 <!DOCTYPE html>
@@ -62,7 +63,6 @@
                         }
                     }
                 </div>
-
             </div>
             <div class="col-2">
                 <p>Home / T-Shirt</p>
@@ -83,9 +83,7 @@
                 <select id="sizeSelect">
                     <option>Select Size</option>
                 </select>
-
                 <script>
-
                     document.addEventListener('DOMContentLoaded', function () {
                        
                         colorSelect.addEventListener('change', function () { // Sự kiện 'change' khi chọn một tùy chọn từ select
@@ -117,14 +115,12 @@
                                 .then(data => {
                                     const sizeSelect = document.getElementById('sizeSelect');
                                         sizeSelect.innerHTML = ''; // Xóa nội dung cũ
-                                        console.log(data);
                                         // Thêm tùy chọn "Select Size" vào đầu tiên
                                         const defaultOption = document.createElement('option');
                                         defaultOption.text = 'Select Size';
                                         defaultOption.disabled = true;
                                         defaultOption.selected = true;
                                         sizeSelect.appendChild(defaultOption);
-
                                         // Thêm các tùy chọn từ trường 'size' của mỗi object vào thẻ select
                                         data.forEach(product => {
                                             const option = document.createElement('option');
@@ -133,9 +129,7 @@
                                         });
                                         sizeSelect.addEventListener('change', function () {
                                             const selectedSize = this.value; // Lấy giá trị của tùy chọn đã chọn
-
                                             // Sử dụng giá trị đã chọn ở đây, ví dụ:
-                                            console.log("Selected size:", selectedSize);
                                         });
                                 })
                                 .catch(error => {
@@ -147,13 +141,13 @@
                 </script>
                     <input id="quantity-btn" type="number" value="1">
 
-                @if (isLoggedIn)
+                @if (checkQuantity != 0)
                 {
                     <button class="btn" id="add-to-cart-btn" style="border: none">Add To Cart</button>
                 }
                 else
                 {
-                    <span class="btn disabled">Hãy Login</span>
+                    <span class="btn disabled">Hết hàng</span>
                 }
                     <h3>
                         Description

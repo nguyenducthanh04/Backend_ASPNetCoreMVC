@@ -7,8 +7,8 @@ namespace Website_Sport.Models
     {
         public Product()
         {
-            Carts = new HashSet<Cart>();
             Images = new HashSet<Image>();
+            OrderDetails = new HashSet<OrderDetail>();
         }
 
         public int ProductId { get; set; }
@@ -23,7 +23,7 @@ namespace Website_Sport.Models
         public int CategoryId { get; set; }
 
         public virtual Category Category { get; set; } = null!;
-        public virtual ICollection<Cart> Carts { get; set; }
         public virtual ICollection<Image> Images { get; set; }
+        public virtual ICollection<OrderDetail> OrderDetails { get; set; }
     }
 }

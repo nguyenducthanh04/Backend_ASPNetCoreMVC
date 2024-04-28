@@ -16,9 +16,10 @@ namespace Website_Sport.Models
         {
         }
 
-        public virtual DbSet<Cart> Carts { get; set; } = null!;
         public virtual DbSet<Category> Categories { get; set; } = null!;
         public virtual DbSet<Image> Images { get; set; } = null!;
+        public virtual DbSet<Order> Orders { get; set; } = null!;
+        public virtual DbSet<OrderDetail> OrderDetails { get; set; } = null!;
         public virtual DbSet<Position> Positions { get; set; } = null!;
         public virtual DbSet<Product> Products { get; set; } = null!;
         public virtual DbSet<User> Users { get; set; } = null!;
@@ -34,29 +35,6 @@ namespace Website_Sport.Models
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
-            modelBuilder.Entity<Cart>(entity =>
-            {
-                entity.Property(e => e.CreatedDate)
-                    .IsRowVersion()
-                    .IsConcurrencyToken();
-
-                entity.Property(e => e.Price)
-                    .HasMaxLength(30)
-                    .IsUnicode(false);
-
-                entity.HasOne(d => d.Product)
-                    .WithMany(p => p.Carts)
-                    .HasForeignKey(d => d.ProductId)
-                    .OnDelete(DeleteBehavior.Cascade)
-                    .HasConstraintName("FK__Carts__ProductId__3D2915A8");
-
-                entity.HasOne(d => d.User)
-                    .WithMany(p => p.Carts)
-                    .HasForeignKey(d => d.UserId)
-                    .OnDelete(DeleteBehavior.Cascade)
-                    .HasConstraintName("FK__Carts__UserId__3C34F16F");
-            });
-
             modelBuilder.Entity<Category>(entity =>
             {
                 entity.Property(e => e.CategoryName).HasMaxLength(200);
@@ -74,6 +52,43 @@ namespace Website_Sport.Models
                     .WithMany(p => p.Images)
                     .HasForeignKey(d => d.ProductId)
                     .HasConstraintName("fk_foreign_key_img_prd");
+            });
+
+            modelBuilder.Entity<Order>(entity =>
+            {
+                entity.Property(e => e.CreatedAt)
+                    .HasColumnType("datetime")
+                    .HasDefaultValueSql("(getdate())");
+
+                entity.Property(e => e.OrderName).HasMaxLength(200);
+
+                entity.Property(e => e.Status)
+                    .HasMaxLength(50)
+                    .IsUnicode(false);
+
+                entity.HasOne(d => d.User)
+                    .WithMany(p => p.Orders)
+                    .HasForeignKey(d => d.UserId)
+                    .HasConstraintName("FK__Orders__CreatedA__634EBE90");
+            });
+
+            modelBuilder.Entity<OrderDetail>(entity =>
+            {
+                entity.ToTable("OrderDetail");
+
+                entity.Property(e => e.Quantity)
+                    .HasMaxLength(1)
+                    .IsUnicode(false);
+
+                entity.HasOne(d => d.Order)
+                    .WithMany(p => p.OrderDetails)
+                    .HasForeignKey(d => d.OrderId)
+                    .HasConstraintName("FK__OrderDeta__Order__662B2B3B");
+
+                entity.HasOne(d => d.Product)
+                    .WithMany(p => p.OrderDetails)
+                    .HasForeignKey(d => d.ProductId)
+                    .HasConstraintName("FK__OrderDeta__Produ__671F4F74");
             });
 
             modelBuilder.Entity<Position>(entity =>

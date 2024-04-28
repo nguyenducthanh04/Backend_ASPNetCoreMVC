@@ -74,6 +74,11 @@ app.MapControllerRoute(
 app.MapControllerRoute(
     name: "payment",
     pattern: "payment",
-    defaults: new { Controller = "PayMent", action = "Index" }
+    defaults: new { Controller = "PayMent", action = "Pay" }
+    );
+app.MapControllerRoute(
+    name: "ordersuccess",
+    pattern: "ordersuccess",
+    defaults: new { Controller = "PayMent", action = "OrderSuccess" }
     );
 app.Run();
