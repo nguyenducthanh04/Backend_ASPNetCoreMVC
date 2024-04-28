@@ -83,4 +83,19 @@ app.MapControllerRoute(
     pattern: "delete-user/{id?}",
     defaults: new { Controller = "User", action = "Delete" }
     );
+app.MapControllerRoute(
+    name: "list-order",
+    pattern: "list-order",
+    defaults: new { Controller = "Order", action = "Index" }
+    );
+app.MapControllerRoute(
+    name: "chitiet-donhang",
+    pattern: "chitiet-donhang/{id?}",
+    defaults: new { Controller = "Order", action = "Details" }
+    );
+app.MapControllerRoute(
+    name: "xoa-donhang",
+    pattern: "xoa-donhang/{id?}",
+    defaults: new { Controller = "Order", action = "Delete" }
+    );
 app.Run();

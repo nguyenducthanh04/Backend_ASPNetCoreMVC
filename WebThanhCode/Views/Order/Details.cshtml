@@ -1,0 +1,124 @@
+﻿@model WebThanhCode.Models.Order
+@using Microsoft.EntityFrameworkCore
+@{
+    ViewData["Title"] = "Details";
+    Layout = "~/Views/Shared/_LayoutAdmin.cshtml";
+    ShopTheThaoContext context = new ShopTheThaoContext();
+    var list = context.OrderDetails.Include(l => l.Product).Where(od => od.OrderId == Model.OrderId).ToList();
+}
+<script>
+    console.log("@list");
+</script>
+<div class="container">
+    <h4 style="text-align: center; margin-bottom: 30px">Chi tiết đơn hàng</h4>
+    <div class="container">
+        <div style="margin-bottom: 14px" class="col-sm-10">
+            <strong>Id đơn hàng:</strong><span>@Model.OrderId</span>
+        </div>
+        <div style="margin-bottom: 14px" class="col-sm-10">
+            <strong>
+                Tên đơn hàng:
+            </strong><span>
+                @Model.OrderName
+            </span>
+        </div>
+        <div style="margin-bottom: 14px" class="col-sm-10">
+            <strong>
+                Người đặt hàng:
+            </strong><span>
+                @Model.User.UserName
+            </span>
+        </div>
+        <div style="margin-bottom: 14px" class="col-sm-10">
+            <strong>
+                Trạng thái:
+            </strong><span>
+                @(Model.Status == "0" ? "Đang chờ xác nhận" : "Đã xác nhận")
+            </span>
+        </div>
+        <div style="margin-bottom: 14px" class="col-sm-10">
+            <strong>
+                Ngày đặt:
+            </strong><span>
+                @Model.CreatedAt
+            </span>
+        </div>
+    <table class="table table-bordered">
+        <thead>
+            <tr>
+                <th>Mã sản phẩm</th>
+                <th>Tên sản phẩm</th>
+                <th>Kiểu sản phẩm</th>
+                <th>Giá sản phẩm</th>
+                <th>Màu sản phẩm</th>
+                <th>Size sản phẩm</th>
+                <th>Số lượng sản phẩm</th>
+            </tr>
+        </thead>
+        <tbody>
+                 @foreach (var prd in list)
+                {
+                  <tr>
+                  <td>@prd.ProductId</td>
+                  <td>@prd.Product.ProductName</td>
+                  <td>@prd.Product.Type</td>
+                  <td>@prd.Product.Price</td>
+                  <td>@prd.Product.Color</td>
+                  <td>@prd.Product.Size</td>
+                  <td>@prd.Quantity</td>
+                  </tr> 
+                } 
+        </tbody>
+    </table>
+        @if(Model.Status == "0")
+        {
+            <button href="" class="btn btn-info" id="btn-confirm">Xác nhận đơn hàng</button>
+        } else
+        {
+            <p style="color:red">Đơn hàng đã được xác nhận.</p>
+        }
+    </div>
+<script>
+        document.addEventListener("DOMContentLoaded", function () {
+    document.getElementById("btn-confirm").addEventListener("click", function () {
+        const updatedOrder = {
+            OrderId: "@Model.OrderId", 
+            Status: "1"
+        };
+
+        fetch('/api/orders/@Model.OrderId', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify(updatedOrder)
+        })
+            .then(response => {
+                if (!response.ok) {
+                    throw new Error('Có lỗi xảy ra khi cập nhật order.');
+                }
+                return response.json();
+            })
+            .then(data => {
+                alert("Xác nhận thành công đơn hàng!")
+                window.location.href = "http://localhost:5177/list-order";
+                console.log('Order đã được cập nhật thành công:', data);
+            })
+                // Hành động thứ hai: Gửi yêu cầu Fetch API POST thứ hai
+                // fetch('/api/some-other-action')
+                //     .then(response => {
+                //         if (!response.ok) {
+                //             throw new Error('Có lỗi xảy ra khi thực hiện hành động khác.');
+                //         }
+                //         console.log("Update saled thành công!")
+                //         window.location.href = "http://localhost:5177/list-order";
+                //     })
+                //     .catch(error => {
+                //         console.error('Đã xảy ra lỗi khi thực hiện hành động update saled:', error);
+                //     });
+            .catch(error => {
+                console.error('Đã xảy ra lỗi:', error);
+            });
+    });
+        });
+</script>
