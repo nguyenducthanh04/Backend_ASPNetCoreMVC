@@ -93,29 +93,17 @@
             },
             body: JSON.stringify(updatedOrder)
         })
-            .then(response => {
-                if (!response.ok) {
-                    throw new Error('Có lỗi xảy ra khi cập nhật order.');
-                }
-                return response.json();
-            })
+            // .then(response => {
+            //     if (!response.ok) {
+            //         throw new Error('Có lỗi xảy ra khi cập nhật order.');
+            //     }
+            //     return response.json();
+            // })
             .then(data => {
                 alert("Xác nhận thành công đơn hàng!")
                 window.location.href = "http://localhost:5177/list-order";
                 console.log('Order đã được cập nhật thành công:', data);
             })
-                // Hành động thứ hai: Gửi yêu cầu Fetch API POST thứ hai
-                // fetch('/api/some-other-action')
-                //     .then(response => {
-                //         if (!response.ok) {
-                //             throw new Error('Có lỗi xảy ra khi thực hiện hành động khác.');
-                //         }
-                //         console.log("Update saled thành công!")
-                //         window.location.href = "http://localhost:5177/list-order";
-                //     })
-                //     .catch(error => {
-                //         console.error('Đã xảy ra lỗi khi thực hiện hành động update saled:', error);
-                //     });
             .catch(error => {
                 console.error('Đã xảy ra lỗi:', error);
             });

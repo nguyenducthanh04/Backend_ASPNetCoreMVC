@@ -26,12 +26,22 @@ namespace WebThanhCode.Controllers
             {
                 return BadRequest();
             }
-            var existingOrder = context.Orders.Find(id);
+            var existingOrder = context.Orders
+                                .Include(o => o.OrderDetails)
+                                    .ThenInclude(od => od.Product)
+                                .SingleOrDefault(o => o.OrderId == id);
             if (existingOrder == null)
             {
                 return NotFound();
             }
             existingOrder.Status = updatedOrder.Status;
+            foreach (var orderDetail in existingOrder.OrderDetails)
+            {
+                var product = orderDetail.Product;
+                product.Quantity -= orderDetail.Quantity;
+                product.Saled += orderDetail.Quantity;
+                // Update other properties as needed
+            }
             context.SaveChanges();
             return Json(existingOrder); 
         }

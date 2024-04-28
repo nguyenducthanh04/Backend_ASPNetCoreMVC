@@ -38,7 +38,7 @@ namespace Website_Sport.Controllers
                     {
                         OrderId = idOrder,
                         ProductId = product.ProductId,
-                        Quantity = item.Quantity.ToString(),
+                        Quantity = item.Quantity,
                     };
                     context.OrderDetails.Add(orderDetail);
                     context.SaveChanges();

@@ -76,10 +76,6 @@ namespace Website_Sport.Models
             {
                 entity.ToTable("OrderDetail");
 
-                entity.Property(e => e.Quantity)
-                    .HasMaxLength(1)
-                    .IsUnicode(false);
-
                 entity.HasOne(d => d.Order)
                     .WithMany(p => p.OrderDetails)
                     .HasForeignKey(d => d.OrderId)
