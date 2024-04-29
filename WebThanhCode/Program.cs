@@ -98,4 +98,24 @@ app.MapControllerRoute(
     pattern: "xoa-donhang/{id?}",
     defaults: new { Controller = "Order", action = "Delete" }
     );
+app.MapControllerRoute(
+    name: "list-category",
+    pattern: "list-category",
+    defaults: new { Controller = "Category", action = "Index" }
+    );
+app.MapControllerRoute(
+    name: "create-category",
+    pattern: "create-category",
+    defaults: new { Controller = "Category", action = "Create" }
+    );
+app.MapControllerRoute(
+    name: "edit-category",
+    pattern: "edit-category/{id?}",
+    defaults: new { Controller = "Category", action = "Edit" }
+    );
+app.MapControllerRoute(
+    name: "delete-category",
+    pattern: "delete-category/{id?}",
+    defaults: new { Controller = "Category", action = "Delete" }
+    );
 app.Run();

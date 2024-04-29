@@ -13,10 +13,7 @@ namespace Website_Sport.Controllers
         {
             int pageSize = 4;
             int pageNumber = page == null || page < 0 ? 1 : page.Value;
-            // Lấy tất cả sản phẩm từ cơ sở dữ liệu và eager load dữ liệu hình ảnh
             var products = context.Products.Include(p => p.Images).ToList();
-
-            // Lọc ra các sản phẩm duy nhất dựa trên trường Type
             var uniqueProducts = products.GroupBy(p => p.Type)
                                           .Select(g => g.First())
                                           .ToList();
@@ -28,13 +25,10 @@ namespace Website_Sport.Controllers
             return View(context.Products.Include("Images").Where(s => s.ProductId == id).FirstOrDefault());
         }
         [HttpGet]
-        public IActionResult GetProductsByColor(string color, string type)
+        public IActionResult GetProductByCategory(string category)
         {
-            // Lấy danh sách sản phẩm có Color = color và Type = type từ database
-            var products = context.Products
-                .Where(p => p.Color == "Xanh" && p.Type == "Áo thi đấu bóng đá CAHN 2024")
-                .ToList();
-            return Json(products); // Trả về danh sách sản phẩm dưới dạng JSON
+            var products = context.Products.Include(c => c.Category).Include(i => i.Images).Where(x => x.Category.CategoryName == category).OrderBy(p => p.ProductName).ToList();    
+        return View(products);
         }
     }
 }

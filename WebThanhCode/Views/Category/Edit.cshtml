@@ -1,0 +1,18 @@
+﻿@model WebThanhCode.Models.Category
+@{
+    ViewData["Title"] = "Edit";
+    Layout = "~/Views/Shared/_LayoutAdmin.cshtml";
+}
+<h5 style="margin-bottom: 30px;">Edit category</h5>
+<div class="container">
+    <form asp-action="Edit" method="post">
+        <div class="mb-3">
+            <input asp-for="CategoryName" placeholder="Name Category" class="form-control" />
+        </div>
+        <div class="mb-3">
+            <button type="submit" class="btn btn-primary">Save</button>
+        </div>
+    </form>
+</div>
+
+

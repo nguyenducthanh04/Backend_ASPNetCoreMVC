@@ -1,0 +1,156 @@
+﻿@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/Shared/MasterLayout.cshtml";
+    ShopTheThaoContext context = new ShopTheThaoContext();
+    var categoryList = context.Categories.ToList();
+}
+@* @using X.PagedList.Mvc.Core;
+@model X.PagedList.IPagedList<Website_Sport.Models.Product> *@
+@model List<Website_Sport.Models.Product>
+<link rel="stylesheet" href="../MasterLayout/style.css">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet">
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+<style>
+    .header {
+        background: initial !important;
+    }
+    /* Dropdown Button */
+    .dropbtn {
+        background-color: #04AA6D;
+        color: white;
+        padding: 12px;
+        font-size: 16px;
+        border: none;
+    }
+
+    /* The container <div> - needed to position the dropdown content */
+    .dropdown {
+        position: relative;
+        display: inline-block;
+    }
+
+    /* Dropdown Content (Hidden by Default) */
+    .dropdown-content {
+        display: none;
+        position: absolute;
+        background-color: #f1f1f1;
+        min-width: 160px;
+        box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+        z-index: 1;
+    }
+
+        /* Links inside the dropdown */
+        .dropdown-content a {
+            color: black;
+            padding: 12px 16px;
+            text-decoration: none;
+            display: block;
+        }
+
+            /* Change color of dropdown links on hover */
+            .dropdown-content a:hover {
+                background-color: #ddd;
+            }
+
+    /* Show the dropdown menu on hover */
+    .dropdown:hover .dropdown-content {
+        display: block;
+    }
+
+    /* Change the background color of the dropdown button when the dropdown content is shown */
+    .dropdown:hover .dropbtn {
+        background-color: #3e8e41;
+    }
+
+</style>
+<div class="small-container">
+    <div class="row row-2" style="margin-top: 50px;
+    margin-right: auto;
+    margin-bottom: 50px;
+    margin-left: auto;
+}">
+        <div class="dropdown">
+            <button class="dropbtn">Categories</button>
+            <div class="dropdown-content">
+                <a href="/products">All products</a>
+                @foreach (var cate in categoryList)
+                {
+                    <a href="/get-product-category/?category=@cate.CategoryName">@cate.CategoryName</a>
+                }
+            </div>
+        </div>
+    </div>
+    <div class="row row-2" style="margin-top: 50px;
+    margin-right: auto;
+    margin-bottom: 50px;
+    margin-left: auto;
+}">
+        <h2>Products</h2>
+        <select>
+            <option>Default Shop</option>
+            <option>Short by price</option>
+            <option>Short by popularity</option>
+            <option>Short by Rating</option>
+            <option>Short by Sale</option>
+        </select>
+    </div>
+
+    <div class="row">
+        @foreach (var item in Model)
+        {
+
+            <div class="col-4">
+                <a href="/product-detail/@item.ProductId">
+                    @if (item.Images.Any())
+                    {
+                        <img src="http://localhost:5177/api/product@(item.Images.First().Image1)"
+                             alt="Product Image">
+                    }
+                    else
+                    {
+                        <h4 style="color: red">No images available!</h4>
+                    }
+                    <h4>@item.Type</h4>
+                    <div class="rating">
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star-o"></i>
+                    </div>
+                    <p>@item.Price ₫</p>
+                </a>
+            </div>
+        }
+
+        @*    <div class="page-btn">
+        <span>
+        @Html.PagedListPager(Model, page=>Url.Action("Index", new {page=page}))
+        </span>
+        </div> *@
+     @*    <nav aria-label="Page navigation example" style="margin-bottom: 12px">
+            <ul class="pagination">
+                <li class="page-item"> @Html.PagedListPager(Model, page=>Url.Action("Index", new {page=page}))</li>
+            </ul>
+        </nav> *@
+    </div>
+
+    <!-- ------------------- js for toggle menu-------------- -->
+    <script>
+        var MenuItems = document.getElementById("MenuItems");
+
+        MenuItems.style.maxHeight = "0px";
+
+        function menutoggle() {
+            if (MenuItems.style.maxHeight == "0px") {
+                MenuItems.style.maxHeight = "200px";
+            }
+            else {
+                MenuItems.style.maxHeight = "0px";
+            }
+        }
+
+    </script>
+
+

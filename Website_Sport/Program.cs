@@ -81,4 +81,9 @@ app.MapControllerRoute(
     pattern: "ordersuccess",
     defaults: new { Controller = "PayMent", action = "OrderSuccess" }
     );
+app.MapControllerRoute(
+    name: "get-product-category",
+    pattern: "get-product-category",
+    defaults: new { Controller = "Product", action = "GetProductByCategory" }
+    );
 app.Run();
