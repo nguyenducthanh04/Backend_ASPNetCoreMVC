@@ -244,3 +244,4 @@ C:\C#_CNTT_1605\Website_Sport\WebThanhCode\obj\Debug\net6.0\refint\WebThanhCode.
 C:\C#_CNTT_1605\Website_Sport\WebThanhCode\obj\Debug\net6.0\WebThanhCode.pdb
 C:\C#_CNTT_1605\Website_Sport\WebThanhCode\obj\Debug\net6.0\WebThanhCode.genruntimeconfig.cache
 C:\C#_CNTT_1605\Website_Sport\WebThanhCode\obj\Debug\net6.0\ref\WebThanhCode.dll
+C:\C#_CNTT_1605\Website_Sport\WebThanhCode\bin\Debug\net6.0\BCrypt.Net-Core.dll

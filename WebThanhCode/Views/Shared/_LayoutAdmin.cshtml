@@ -1,4 +1,18 @@
-﻿<!DOCTYPE html>
+﻿@using Microsoft.AspNetCore.Mvc;
+@using Microsoft.CodeAnalysis.Scripting;
+@using Microsoft.EntityFrameworkCore;
+@using Microsoft.AspNetCore.Http
+@{
+    ShopTheThaoContext context = new ShopTheThaoContext();
+    var httpContextAccessor = Context.RequestServices.GetService(typeof(Microsoft.AspNetCore.Http.IHttpContextAccessor)) as Microsoft.AspNetCore.Http.IHttpContextAccessor;
+    if (httpContextAccessor.HttpContext.Session.GetString("Email") != null)
+    {
+        var userEmail = httpContextAccessor.HttpContext.Session.GetString("Email");
+        var user = context.Users.FirstOrDefault(u => u.Email == userEmail);
+    }
+}
+
+<!DOCTYPE html>
 <html lang="en">
 
 <head>
@@ -211,7 +225,7 @@
 
                     <a class="nav-link nav-profile d-flex align-items-center pe-0" href="#" data-bs-toggle="dropdown">
                         <img src="~/assets/img/avatar-thanh.jpg" alt="Profile" class="rounded-circle">
-                        <span class="d-none d-md-block dropdown-toggle ps-2">Nguyen Duc Thanh</span>
+                        <span class="d-none d-md-block dropdown-toggle ps-2">Thanh Duc Nguyen</span>
                     </a><!-- End Profile Iamge Icon -->
 
                     <ul class="dropdown-menu dropdown-menu-end dropdown-menu-arrow profile">

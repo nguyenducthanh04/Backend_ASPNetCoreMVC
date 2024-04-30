@@ -9,6 +9,10 @@
       "PackagePath": "staticwebassets\\MasterLayout\\StylePayMent.css"
     },
     {
+      "Id": "C:\\C#_CNTT_1605\\Website_Sport\\Website_Sport\\wwwroot\\MasterLayout\\images\\2.png",
+      "PackagePath": "staticwebassets\\MasterLayout\\images\\2.png"
+    },
+    {
       "Id": "C:\\C#_CNTT_1605\\Website_Sport\\Website_Sport\\wwwroot\\MasterLayout\\images\\adidas.png",
       "PackagePath": "staticwebassets\\MasterLayout\\images\\adidas.png"
     },
@@ -19,6 +23,14 @@
     {
       "Id": "C:\\C#_CNTT_1605\\Website_Sport\\Website_Sport\\wwwroot\\MasterLayout\\images\\app-store.png",
       "PackagePath": "staticwebassets\\MasterLayout\\images\\app-store.png"
+    },
+    {
+      "Id": "C:\\C#_CNTT_1605\\Website_Sport\\Website_Sport\\wwwroot\\MasterLayout\\images\\bitis.png",
+      "PackagePath": "staticwebassets\\MasterLayout\\images\\bitis.png"
+    },
+    {
+      "Id": "C:\\C#_CNTT_1605\\Website_Sport\\Website_Sport\\wwwroot\\MasterLayout\\images\\bongchuyen.png",
+      "PackagePath": "staticwebassets\\MasterLayout\\images\\bongchuyen.png"
     },
     {
       "Id": "C:\\C#_CNTT_1605\\Website_Sport\\Website_Sport\\wwwroot\\MasterLayout\\images\\buy-1.jpg",
@@ -105,8 +117,16 @@
       "PackagePath": "staticwebassets\\MasterLayout\\images\\logo.png"
     },
     {
+      "Id": "C:\\C#_CNTT_1605\\Website_Sport\\Website_Sport\\wwwroot\\MasterLayout\\images\\logothethao.png",
+      "PackagePath": "staticwebassets\\MasterLayout\\images\\logothethao.png"
+    },
+    {
       "Id": "C:\\C#_CNTT_1605\\Website_Sport\\Website_Sport\\wwwroot\\MasterLayout\\images\\menu.png",
       "PackagePath": "staticwebassets\\MasterLayout\\images\\menu.png"
+    },
+    {
+      "Id": "C:\\C#_CNTT_1605\\Website_Sport\\Website_Sport\\wwwroot\\MasterLayout\\images\\nike.png",
+      "PackagePath": "staticwebassets\\MasterLayout\\images\\nike.png"
     },
     {
       "Id": "C:\\C#_CNTT_1605\\Website_Sport\\Website_Sport\\wwwroot\\MasterLayout\\images\\play-store.png",

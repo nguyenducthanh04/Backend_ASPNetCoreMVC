@@ -245,3 +245,4 @@ C:\C#_CNTT_1605\Website_Sport\Website_Sport\obj\Debug\net7.0\ref\Website_Sport.d
 C:\C#_CNTT_1605\Website_Sport\Website_Sport\bin\Debug\net7.0\X.PagedList.dll
 C:\C#_CNTT_1605\Website_Sport\Website_Sport\bin\Debug\net7.0\X.PagedList.Mvc.Core.dll
 C:\C#_CNTT_1605\Website_Sport\Website_Sport\obj\Debug\net7.0\Website_Sport.MvcApplicationPartsAssemblyInfo.cs
+C:\C#_CNTT_1605\Website_Sport\Website_Sport\bin\Debug\net7.0\BCrypt.Net-Core.dll

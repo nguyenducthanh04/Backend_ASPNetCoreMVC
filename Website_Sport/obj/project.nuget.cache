@@ -1,9 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "AbXa0dsRVUaod53uBrEVJgsqOhRxUyQ8NKhSo7EhvVd3N/UF2FxWQLEfEEXfKh/FEtGJfH6RU0kxkMvTrT/I4g==",
+  "dgSpecHash": "7he0NOp/UdKNaAQMtun9OTdshrpTtntnWvTPAzaKIfxIpc3rgLZ0SvVH6ULa8s7SLd5BQKfFcE1i2hVEEF868A==",
   "success": true,
   "projectFilePath": "C:\\C#_CNTT_1605\\Website_Sport\\Website_Sport\\Website_Sport.csproj",
   "expectedPackageFiles": [
+    "C:\\Users\\This PC\\.nuget\\packages\\bcrypt.net-core\\1.6.0\\bcrypt.net-core.1.6.0.nupkg.sha512",
     "C:\\Users\\This PC\\.nuget\\packages\\humanizer\\2.14.1\\humanizer.2.14.1.nupkg.sha512",
     "C:\\Users\\This PC\\.nuget\\packages\\humanizer.core\\2.14.1\\humanizer.core.2.14.1.nupkg.sha512",
     "C:\\Users\\This PC\\.nuget\\packages\\humanizer.core.af\\2.14.1\\humanizer.core.af.2.14.1.nupkg.sha512",

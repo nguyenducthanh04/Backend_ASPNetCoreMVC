@@ -38,8 +38,8 @@ namespace WebThanhCode.Controllers
             foreach (var orderDetail in existingOrder.OrderDetails)
             {
                 var product = orderDetail.Product;
-                product.Quantity -= orderDetail.Quantity;
-                product.Saled += orderDetail.Quantity;
+                product.Quantity -= orderDetail.Quantity ?? 0;
+                product.Saled += orderDetail.Quantity ?? 0;
                 // Update other properties as needed
             }
             context.SaveChanges();

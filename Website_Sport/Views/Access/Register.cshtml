@@ -1,4 +1,4 @@
-﻿
+﻿@model Website_Sport.Models.User
 @{
     ViewData["Title"] = "Register";
     Layout = "~/Views/Shared/MasterLayout.cshtml";
@@ -36,10 +36,12 @@
                         <a href="">Register</a>
                     </form> -->
 
-                    <form id="RegForm">
-                        <input type="text" placeholder="Username">
-                        <input type="email" placeholder="Email">
-                        <input type="password" placeholder="Password">
+                    <form id="RegForm" asp-controller="Access" asp-action="Register">
+                        <input type="text" id="username" name="username" placeholder="Username">
+                        <input type="email" id="email" name="email" placeholder="Email">
+                        <input type="password" id="password" name="password" placeholder="Password">
+                        <input type="text" id="address" name="address" placeholder="Address">
+                        <input type="text" id="phone" name="phone" placeholder="Phone">
                         <button type="submit" class="btn">Register</button>
                     </form>
 

@@ -119,8 +119,6 @@ namespace Website_Sport.Models
 
                 entity.Property(e => e.Email).HasMaxLength(200);
 
-                entity.Property(e => e.Password).HasMaxLength(50);
-
                 entity.Property(e => e.UserName).HasMaxLength(200);
 
                 entity.HasOne(d => d.Position)

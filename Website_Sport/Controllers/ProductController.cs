@@ -9,11 +9,15 @@ namespace Website_Sport.Controllers
     public class ProductController : Controller
     {
         ShopTheThaoContext context = new ShopTheThaoContext();
-        public IActionResult Index(int? page)
+        public IActionResult Index(int? page, string type)
         {
             int pageSize = 4;
             int pageNumber = page == null || page < 0 ? 1 : page.Value;
             var products = context.Products.Include(p => p.Images).ToList();
+            if(!string.IsNullOrEmpty(type))
+            {
+                 products = products.Where(x => x.Type.IndexOf(type, StringComparison.OrdinalIgnoreCase) >= 0).ToList();
+            }
             var uniqueProducts = products.GroupBy(p => p.Type)
                                           .Select(g => g.First())
                                           .ToList();
@@ -22,7 +26,7 @@ namespace Website_Sport.Controllers
         }
         public IActionResult Details (int id)
         {
-            return View(context.Products.Include("Images").Where(s => s.ProductId == id).FirstOrDefault());
+            return View(context.Products.Include("Images").Include("Category").Where(s => s.ProductId == id).FirstOrDefault());
         }
         [HttpGet]
         public IActionResult GetProductByCategory(string category)

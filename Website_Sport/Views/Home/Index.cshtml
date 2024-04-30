@@ -52,8 +52,8 @@
          @foreach (var product in Model)
     {
         <div class="col-4">
-                <a href="/product-detail"><img src="http://localhost:5177/api/product@(product.Images.First().Image1)"></a>
-                <a href="/product-detail"><h4>@product.ProductName</h4></a>
+                <a href="/product-detail/@product.ProductId"><img src="http://localhost:5177/api/product@(product.Images.First().Image1)"></a>
+                <a href="/product-detail/@product.ProductId"><h4>@product.ProductName</h4></a>
             <div class="rating">
                 <i class="fa fa-star"></i>
                 <i class="fa fa-star"></i>
@@ -249,16 +249,16 @@
                 <img src="../MasterLayout/images/adidas2.jpg">
             </div>
             <div class="col-5">
-                <img src="../MasterLayout/images/logo-oppo.png">
+                <img src="../MasterLayout/images/bongchuyen.png">
             </div>
             <div class="col-5">
-                <img src="../MasterLayout/images/logo-coca-cola.png">
+                <img src="../MasterLayout/images/nike.png">
             </div>
             <div class="col-5">
-                <img src="../MasterLayout/images/logo-paypal.png">
+                <img src="../MasterLayout/images/logothethao.png">
             </div>
             <div class="col-5">
-                <img src="../MasterLayout/images/logo-philips.png">
+                <img src="../MasterLayout/images/bitis.png">
             </div>
         </div>
     </div>

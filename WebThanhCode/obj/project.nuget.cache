@@ -1,9 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "lzIh/guqV3I93PIRAGowRbMmaVHVzZ4YTdbrFIwuCdhEdguA46ON03aMHVKTTldMxgqkHEMRvcGd9m1y2nAlyg==",
+  "dgSpecHash": "EtZxgXT1DEmgRAF+GdpDg+P1c0MpS6Tae5m+71Gm/WVPdcR9e+rmzEv4PPc7IKqV/bQXBJqaIOeq6u7ow3GmAA==",
   "success": true,
   "projectFilePath": "C:\\C#_CNTT_1605\\Website_Sport\\WebThanhCode\\WebThanhCode.csproj",
   "expectedPackageFiles": [
+    "C:\\Users\\This PC\\.nuget\\packages\\bcrypt.net-core\\1.6.0\\bcrypt.net-core.1.6.0.nupkg.sha512",
     "C:\\Users\\This PC\\.nuget\\packages\\humanizer\\2.14.1\\humanizer.2.14.1.nupkg.sha512",
     "C:\\Users\\This PC\\.nuget\\packages\\humanizer.core\\2.14.1\\humanizer.core.2.14.1.nupkg.sha512",
     "C:\\Users\\This PC\\.nuget\\packages\\humanizer.core.af\\2.14.1\\humanizer.core.af.2.14.1.nupkg.sha512",

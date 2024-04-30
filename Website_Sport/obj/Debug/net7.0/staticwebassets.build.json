@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "wbqabt+VXU29WOQtf5fr/c9ya5YP338i6RaC7Lb+QDg=",
+  "Hash": "yo92sl8HfL0dwaef9qzWBfnwG1Qv0XgJBguGm75evSg=",
   "Source": "Website_Sport",
   "BasePath": "_content/Website_Sport",
   "Mode": "Default",
@@ -1547,6 +1547,23 @@
       "OriginalItemSpec": "wwwroot\\lib\\jquery-validation-unobtrusive\\LICENSE.txt"
     },
     {
+      "Identity": "C:\\C#_CNTT_1605\\Website_Sport\\Website_Sport\\wwwroot\\MasterLayout\\images\\2.png",
+      "SourceId": "Website_Sport",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\C#_CNTT_1605\\Website_Sport\\Website_Sport\\wwwroot\\",
+      "BasePath": "_content/Website_Sport",
+      "RelativePath": "MasterLayout/images/2.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\MasterLayout\\images\\2.png"
+    },
+    {
       "Identity": "C:\\C#_CNTT_1605\\Website_Sport\\Website_Sport\\wwwroot\\MasterLayout\\images\\adidas.png",
       "SourceId": "Website_Sport",
       "SourceType": "Discovered",
@@ -1596,6 +1613,40 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\MasterLayout\\images\\app-store.png"
+    },
+    {
+      "Identity": "C:\\C#_CNTT_1605\\Website_Sport\\Website_Sport\\wwwroot\\MasterLayout\\images\\bitis.png",
+      "SourceId": "Website_Sport",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\C#_CNTT_1605\\Website_Sport\\Website_Sport\\wwwroot\\",
+      "BasePath": "_content/Website_Sport",
+      "RelativePath": "MasterLayout/images/bitis.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\MasterLayout\\images\\bitis.png"
+    },
+    {
+      "Identity": "C:\\C#_CNTT_1605\\Website_Sport\\Website_Sport\\wwwroot\\MasterLayout\\images\\bongchuyen.png",
+      "SourceId": "Website_Sport",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\C#_CNTT_1605\\Website_Sport\\Website_Sport\\wwwroot\\",
+      "BasePath": "_content/Website_Sport",
+      "RelativePath": "MasterLayout/images/bongchuyen.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\MasterLayout\\images\\bongchuyen.png"
     },
     {
       "Identity": "C:\\C#_CNTT_1605\\Website_Sport\\Website_Sport\\wwwroot\\MasterLayout\\images\\buy-1.jpg",
@@ -1938,6 +1989,23 @@
       "OriginalItemSpec": "wwwroot\\MasterLayout\\images\\logo-philips.png"
     },
     {
+      "Identity": "C:\\C#_CNTT_1605\\Website_Sport\\Website_Sport\\wwwroot\\MasterLayout\\images\\logothethao.png",
+      "SourceId": "Website_Sport",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\C#_CNTT_1605\\Website_Sport\\Website_Sport\\wwwroot\\",
+      "BasePath": "_content/Website_Sport",
+      "RelativePath": "MasterLayout/images/logothethao.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\MasterLayout\\images\\logothethao.png"
+    },
+    {
       "Identity": "C:\\C#_CNTT_1605\\Website_Sport\\Website_Sport\\wwwroot\\MasterLayout\\images\\logo-white.png",
       "SourceId": "Website_Sport",
       "SourceType": "Discovered",
@@ -1970,6 +2038,23 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\MasterLayout\\images\\menu.png"
+    },
+    {
+      "Identity": "C:\\C#_CNTT_1605\\Website_Sport\\Website_Sport\\wwwroot\\MasterLayout\\images\\nike.png",
+      "SourceId": "Website_Sport",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\C#_CNTT_1605\\Website_Sport\\Website_Sport\\wwwroot\\",
+      "BasePath": "_content/Website_Sport",
+      "RelativePath": "MasterLayout/images/nike.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\MasterLayout\\images\\nike.png"
     },
     {
       "Identity": "C:\\C#_CNTT_1605\\Website_Sport\\Website_Sport\\wwwroot\\MasterLayout\\images\\play-store.png",
