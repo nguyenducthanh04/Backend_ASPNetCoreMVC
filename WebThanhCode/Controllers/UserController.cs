@@ -23,9 +23,6 @@ namespace WebThanhCode.Controllers
         [HttpPost]
         public IActionResult Create(User user)
         {
-            //context.Users.Add(user);
-            //context.SaveChanges();
-            //return RedirectToAction("Index");
             if (context.Users.Any(u => u.Email == user.Email))
             {
                 ModelState.AddModelError("Email", "Email người dùng đã tồn tại.");

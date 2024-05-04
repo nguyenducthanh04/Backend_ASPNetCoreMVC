@@ -118,4 +118,9 @@ app.MapControllerRoute(
     pattern: "delete-category/{id?}",
     defaults: new { Controller = "Category", action = "Delete" }
     );
+app.MapControllerRoute(
+    name: "doi-matkhau",
+    pattern: "/doi-matkhau",
+    defaults: new { Controller = "Access", action = "ResetPass" }
+    );
 app.Run();

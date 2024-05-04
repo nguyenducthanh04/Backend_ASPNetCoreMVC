@@ -17,6 +17,7 @@ namespace WebThanhCode.Models
         }
 
         public virtual DbSet<Category> Categories { get; set; } = null!;
+        public virtual DbSet<Feedback> Feedbacks { get; set; } = null!;
         public virtual DbSet<Image> Images { get; set; } = null!;
         public virtual DbSet<Order> Orders { get; set; } = null!;
         public virtual DbSet<OrderDetail> OrderDetails { get; set; } = null!;
@@ -38,6 +39,18 @@ namespace WebThanhCode.Models
             modelBuilder.Entity<Category>(entity =>
             {
                 entity.Property(e => e.CategoryName).HasMaxLength(200);
+            });
+
+            modelBuilder.Entity<Feedback>(entity =>
+            {
+                entity.ToTable("feedback");
+
+                entity.Property(e => e.CreatedAt).HasColumnType("datetime");
+
+                entity.HasOne(d => d.User)
+                    .WithMany(p => p.Feedbacks)
+                    .HasForeignKey(d => d.UserId)
+                    .HasConstraintName("FK__feedback__UserId__756D6ECB");
             });
 
             modelBuilder.Entity<Image>(entity =>

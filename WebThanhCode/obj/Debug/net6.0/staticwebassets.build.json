@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "gjAr1VGEiBbHyJwnKYTBL5+vO6NWVFocx9EOBWw+jww=",
+  "Hash": "v1ujbebtw3GiWPZF108F3RwSF04evU4O0hgGQSSU+U0=",
   "Source": "WebThanhCode",
   "BasePath": "_content/WebThanhCode",
   "Mode": "Default",
@@ -15028,6 +15028,23 @@
       "OriginalItemSpec": "wwwroot\\images\\aothidaucahnnhat_6ef4b029-abac-4562-b486-9376e9efe4c6.jpg"
     },
     {
+      "Identity": "C:\\C#_CNTT_1605\\Website_Sport\\WebThanhCode\\wwwroot\\images\\b51107ead5ec5ec0931e371d6973af14_e843d425-63e1-4872-b17d-af12517de454.jpg",
+      "SourceId": "WebThanhCode",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\C#_CNTT_1605\\Website_Sport\\WebThanhCode\\wwwroot\\",
+      "BasePath": "_content/WebThanhCode",
+      "RelativePath": "images/b51107ead5ec5ec0931e371d6973af14_e843d425-63e1-4872-b17d-af12517de454.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\images\\b51107ead5ec5ec0931e371d6973af14_e843d425-63e1-4872-b17d-af12517de454.jpg"
+    },
+    {
       "Identity": "C:\\C#_CNTT_1605\\Website_Sport\\WebThanhCode\\wwwroot\\images\\be-ca-thuy-sinh_84c5c960-3638-4baf-82cf-afa6d26a7ff1.jpg",
       "SourceId": "WebThanhCode",
       "SourceType": "Discovered",
@@ -15317,6 +15334,23 @@
       "OriginalItemSpec": "wwwroot\\images\\h1.png_904a530a-397e-493d-adfb-52f26d2ac881.webp"
     },
     {
+      "Identity": "C:\\C#_CNTT_1605\\Website_Sport\\WebThanhCode\\wwwroot\\images\\hinh-nen-may-tinh-chill-4k (1)_91e5bfe3-0c2e-4530-a318-74344bf64f37.zip",
+      "SourceId": "WebThanhCode",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\C#_CNTT_1605\\Website_Sport\\WebThanhCode\\wwwroot\\",
+      "BasePath": "_content/WebThanhCode",
+      "RelativePath": "images/hinh-nen-may-tinh-chill-4k (1)_91e5bfe3-0c2e-4530-a318-74344bf64f37.zip",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\images\\hinh-nen-may-tinh-chill-4k (1)_91e5bfe3-0c2e-4530-a318-74344bf64f37.zip"
+    },
+    {
       "Identity": "C:\\C#_CNTT_1605\\Website_Sport\\WebThanhCode\\wwwroot\\images\\hinh-nen-may-tinh-chill-4k (1)_f25b8df6-01fd-4d7a-8766-a35cb6ab1d7c.webp",
       "SourceId": "WebThanhCode",
       "SourceType": "Discovered",
@@ -15553,6 +15587,23 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\images\\WIN_20230417_15_53_09_Pro (2)_3edf8b8d-8945-404f-9414-62fc5876fa96.jpg"
+    },
+    {
+      "Identity": "C:\\C#_CNTT_1605\\Website_Sport\\WebThanhCode\\wwwroot\\images\\WIN_20230417_15_53_11_Pro_fc8a93df-76de-4341-8dd4-5f4161e370d6.jpg",
+      "SourceId": "WebThanhCode",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\C#_CNTT_1605\\Website_Sport\\WebThanhCode\\wwwroot\\",
+      "BasePath": "_content/WebThanhCode",
+      "RelativePath": "images/WIN_20230417_15_53_11_Pro_fc8a93df-76de-4341-8dd4-5f4161e370d6.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\images\\WIN_20230417_15_53_11_Pro_fc8a93df-76de-4341-8dd4-5f4161e370d6.jpg"
     },
     {
       "Identity": "C:\\C#_CNTT_1605\\Website_Sport\\WebThanhCode\\wwwroot\\images\\yoriichi_526f949d-ce7c-4430-800f-dbfe81f3414a.jpg",

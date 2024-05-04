@@ -14096,6 +14096,22 @@
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\images\Ảnh chụp màn hình 2022-09-26 111031_fa6c6af1-824c-428b-8ab8-8f4d5e44cd30.png))</OriginalItemSpec>
     </StaticWebAsset>
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\images\b51107ead5ec5ec0931e371d6973af14_e843d425-63e1-4872-b17d-af12517de454.jpg))">
+      <SourceType>Package</SourceType>
+      <SourceId>WebThanhCode</SourceId>
+      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
+      <BasePath>_content/WebThanhCode</BasePath>
+      <RelativePath>images/b51107ead5ec5ec0931e371d6973af14_e843d425-63e1-4872-b17d-af12517de454.jpg</RelativePath>
+      <AssetKind>All</AssetKind>
+      <AssetMode>All</AssetMode>
+      <AssetRole>Primary</AssetRole>
+      <RelatedAsset></RelatedAsset>
+      <AssetTraitName></AssetTraitName>
+      <AssetTraitValue></AssetTraitValue>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\images\b51107ead5ec5ec0931e371d6973af14_e843d425-63e1-4872-b17d-af12517de454.jpg))</OriginalItemSpec>
+    </StaticWebAsset>
     <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\images\be-ca-thuy-sinh_84c5c960-3638-4baf-82cf-afa6d26a7ff1.jpg))">
       <SourceType>Package</SourceType>
       <SourceId>WebThanhCode</SourceId>
@@ -14368,6 +14384,22 @@
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\images\h1.png_904a530a-397e-493d-adfb-52f26d2ac881.webp))</OriginalItemSpec>
     </StaticWebAsset>
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\images\hinh-nen-may-tinh-chill-4k (1)_91e5bfe3-0c2e-4530-a318-74344bf64f37.zip))">
+      <SourceType>Package</SourceType>
+      <SourceId>WebThanhCode</SourceId>
+      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
+      <BasePath>_content/WebThanhCode</BasePath>
+      <RelativePath>images/hinh-nen-may-tinh-chill-4k (1)_91e5bfe3-0c2e-4530-a318-74344bf64f37.zip</RelativePath>
+      <AssetKind>All</AssetKind>
+      <AssetMode>All</AssetMode>
+      <AssetRole>Primary</AssetRole>
+      <RelatedAsset></RelatedAsset>
+      <AssetTraitName></AssetTraitName>
+      <AssetTraitValue></AssetTraitValue>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\images\hinh-nen-may-tinh-chill-4k (1)_91e5bfe3-0c2e-4530-a318-74344bf64f37.zip))</OriginalItemSpec>
+    </StaticWebAsset>
     <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\images\hinh-nen-may-tinh-chill-4k (1)_f25b8df6-01fd-4d7a-8766-a35cb6ab1d7c.webp))">
       <SourceType>Package</SourceType>
       <SourceId>WebThanhCode</SourceId>
@@ -14591,6 +14623,22 @@
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\images\WIN_20230417_15_53_09_Pro (2)_3edf8b8d-8945-404f-9414-62fc5876fa96.jpg))</OriginalItemSpec>
+    </StaticWebAsset>
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\images\WIN_20230417_15_53_11_Pro_fc8a93df-76de-4341-8dd4-5f4161e370d6.jpg))">
+      <SourceType>Package</SourceType>
+      <SourceId>WebThanhCode</SourceId>
+      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
+      <BasePath>_content/WebThanhCode</BasePath>
+      <RelativePath>images/WIN_20230417_15_53_11_Pro_fc8a93df-76de-4341-8dd4-5f4161e370d6.jpg</RelativePath>
+      <AssetKind>All</AssetKind>
+      <AssetMode>All</AssetMode>
+      <AssetRole>Primary</AssetRole>
+      <RelatedAsset></RelatedAsset>
+      <AssetTraitName></AssetTraitName>
+      <AssetTraitValue></AssetTraitValue>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\images\WIN_20230417_15_53_11_Pro_fc8a93df-76de-4341-8dd4-5f4161e370d6.jpg))</OriginalItemSpec>
     </StaticWebAsset>
     <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\images\yoriichi_526f949d-ce7c-4430-800f-dbfe81f3414a.jpg))">
       <SourceType>Package</SourceType>

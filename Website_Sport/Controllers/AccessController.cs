@@ -86,5 +86,51 @@ namespace Website_Sport.Controllers
             context.SaveChanges();
             return RedirectToAction("Login");
         }
+        [HttpGet]
+        public IActionResult ResetPass()
+        {
+            return View();
+        }
+        [HttpPost]
+        public IActionResult ResetPass(string NewPass)
+        {
+            if (HttpContext.Session.GetString("Email") != null)
+            {
+                var userEmail = HttpContext.Session.GetString("Email");
+                var user = context.Users.FirstOrDefault(u => u.Email == userEmail);
+                string hashedPassword = BCrypt.Net.BCrypt.HashPassword(NewPass);
+                user.Password = hashedPassword;
+                context.SaveChanges();
+                return RedirectToAction("Account");
+            }
+            return View();
+        }
+        [HttpGet]
+        public IActionResult ChangeInfo()
+        {
+            if (HttpContext.Session.GetString("Email") != null)
+            {
+                var userEmail = HttpContext.Session.GetString("Email");
+                var user = context.Users.FirstOrDefault(u => u.Email == userEmail);
+                return View(user);
+            }
+            return View();
+        }
+        [HttpPost]
+        public IActionResult ChangeInfo(User us)
+        {
+            if (HttpContext.Session.GetString("Email") != null)
+            {
+                var userEmail = HttpContext.Session.GetString("Email");
+                var user = context.Users.FirstOrDefault(u => u.Email == userEmail);
+                user.UserName = us.UserName;
+                user.Email = us.Email;
+                user.Address = us.Address;
+                user.Phone = us.Phone;
+                context.SaveChanges();
+                return RedirectToAction("Account");
+            }
+            return View();
+        }
     }
 }

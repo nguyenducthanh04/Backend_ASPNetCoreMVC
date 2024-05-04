@@ -7,6 +7,7 @@ namespace Website_Sport.Models
     {
         public User()
         {
+            Feedbacks = new HashSet<Feedback>();
             Orders = new HashSet<Order>();
         }
 
@@ -19,6 +20,7 @@ namespace Website_Sport.Models
         public int PositionId { get; set; }
 
         public virtual Position Position { get; set; } = null!;
+        public virtual ICollection<Feedback> Feedbacks { get; set; }
         public virtual ICollection<Order> Orders { get; set; }
     }
 }

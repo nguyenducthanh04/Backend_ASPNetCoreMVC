@@ -1,0 +1,13 @@
+﻿@model Website_Sport.Models.User
+@{
+    ViewData["Title"] = "ChangeInfo";
+    Layout = "~/Views/Shared/MasterLayout.cshtml";
+}
+<div class="container">
+    <form asp-action="ChangeInfo" method="post">
+        <input type="text" asp-for="UserName"/>
+        <input type="text" asp-for="Address"/>
+        <input type="text" asp-for="Phone" />
+        <button type="submit">Lưu</button>
+    </form>
+</div>

@@ -86,4 +86,14 @@ app.MapControllerRoute(
     pattern: "get-product-category",
     defaults: new { Controller = "Product", action = "GetProductByCategory" }
     );
+app.MapControllerRoute(
+    name: "doi-matkhau",
+    pattern: "doi-matkhau",
+    defaults: new { Controller = "Access", action = "ResetPass" }
+    );
+app.MapControllerRoute(
+    name: "doi-thongtin",
+    pattern: "doi-thongtin",
+    defaults: new { Controller = "Access", action = "ChangeInfo" }
+    );
 app.Run();

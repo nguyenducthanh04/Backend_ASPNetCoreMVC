@@ -20,12 +20,20 @@ build_property._RazorSourceGeneratorDebug =
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWNjZXNzXEFjY291bnQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
+[C:/C\#_CNTT_1605/Website_Sport/Website_Sport/Views/Access/ChangeInfo.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWNjZXNzXENoYW5nZUluZm8uY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
 [C:/C\#_CNTT_1605/Website_Sport/Website_Sport/Views/Access/Login.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWNjZXNzXExvZ2luLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/C\#_CNTT_1605/Website_Sport/Website_Sport/Views/Access/Register.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWNjZXNzXFJlZ2lzdGVyLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/C\#_CNTT_1605/Website_Sport/Website_Sport/Views/Access/ResetPass.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWNjZXNzXFJlc2V0UGFzcy5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/C\#_CNTT_1605/Website_Sport/Website_Sport/Views/Cart/Index.cshtml]

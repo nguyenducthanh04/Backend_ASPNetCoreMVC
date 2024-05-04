@@ -1,0 +1,12 @@
+﻿@model WebThanhCode.Models.User
+@{
+    ViewData["Title"] = "ResetPass";
+    Layout = "~/Views/Shared/_LayoutAdmin.cshtml";
+}
+<div class="container">
+    <form asp-action="ResetPass" method="post">
+        <input name="NewPass" id="NewPass" type="password" placeholder="Nhập password mới..." />
+        <button type="submit">Lưu</button>
+    </form>
+</div>
+
