@@ -6,13 +6,21 @@
     Layout = "~/Views/Shared/MasterLayout.cshtml";
     ShopTheThaoContext context = new ShopTheThaoContext();
     var idString = ViewContext.RouteData.Values["id"]?.ToString();
-    int id;
+    // int id;
+    int id = 0; // Gán giá trị mặc định cho biến id
+    if (!string.IsNullOrEmpty(idString))
+    {
+        int.TryParse(idString, out id); // Chuyển đổi idString sang kiểu int và gán cho biến id
+    }
     var httpContextAccessor = Context.RequestServices.GetService(typeof(Microsoft.AspNetCore.Http.IHttpContextAccessor)) as Microsoft.AspNetCore.Http.IHttpContextAccessor;
     var isLoggedIn = httpContextAccessor.HttpContext.Session.GetString("Email") != null;
     var checkQuantity = Model.Quantity;
     var RelateProducts = context.Products.Include(p => p.Images).Include(p => p.Category).Where(p => p.Category.CategoryName == Model.Category.CategoryName).GroupBy(p => p.Type)
                                           .Select(g => g.First())
                                           .ToList(); 
+    var userEmail = httpContextAccessor.HttpContext.Session.GetString("Email");
+    var user = context.Users.FirstOrDefault(u => u.Email == userEmail);
+    var displayComment = context.Feedbacks.Include(p => p.Product).Include(p => p.User).Where(p => p.ProductId == id);
 }
 
 <!DOCTYPE html>
@@ -26,10 +34,82 @@
           rel="stylesheet">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
     <style>
         .header {
             background: initial !important; 
         }
+
+        .container-form {
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+        /* Comment input */
+        .comment-input {
+            display: flex;
+            margin-bottom: 8px;
+            /* width: 300px; */
+            margin-left: 262px;
+        }
+
+        #comment-text {
+            flex: 1;
+            padding: 4px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            outline: none;
+        }
+
+        #add-comment {
+            padding: 10px 20px;
+            background-color: #007bff;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            margin-left: 6px;
+        }
+
+        /* Comments form */
+        .comments-form {
+            border: 1px solid #ccc;
+            padding: 15px;
+            margin-bottom: 20px;
+            border-radius: 5px;
+        }
+
+        /* Comments */
+        .comments {
+            list-style: none;
+            padding: 0;
+        }
+
+        .comment {
+            /* border: 1px solid #ccc; */
+            padding: 8px;
+            margin-bottom: 10px;
+            border-radius: 5px;
+        }
+
+        .comment-header {
+            display: flex;
+            align-items: center;
+            margin-bottom: 5px;
+        }
+
+        .comment-author {
+            font-weight: bold;
+        }
+
+        .comment-time {
+            margin-left: auto;
+            color: #999;
+        }
+
+        .comment-content {
+            margin-bottom: 0;
+        }
+
     </style>
 </head>
 <body>
@@ -208,11 +288,66 @@
             location.reload();
             localStorage.setItem('cart', JSON.stringify(cartItems));
         }
+    </script>
+    <!--FeedBack-->
+     @if (isLoggedIn)
+     {
+    <div class="comment-input">
+        <form asp-controller="Product" asp-action="FeedBack" method="post" style="display: flex">
+                <textarea id="comment-text" name="content" style="width: 600px;"
+                      placeholder="Enter your comment..."></textarea>
+                      <input type="text" name="productId" value="@id" hidden/>
+                <button id="add-comment" type="submit">Bình luận</button>
+        </form>
+    </div>
+    } else {
+    <p style="color: red; margin-left: 262px">Đăng nhập để sử dụng comment!</p>
+    }
+    <div class="container-form">
+        <form class="comments-form">
+            <div class="comments">
+              @if (displayComment.Any())
+    {
+        @foreach (var item in displayComment)
+        {
+            if (item != null)
+            {
+                <div class="comment">
+                    <div class="comment-header">
+                        <span class="comment-author">@item.User.UserName</span>
+                        <span class="comment-time">@item.CreatedAt</span>
+                    </div>
+                    <p class="comment-content">@item.Content</p>
+                                @if (user != null)
+                                {
+                                    if (user.UserId == @item.User.UserId)
+                                    {
+                                        <a style="color: red; cursor: pointer" href="/xoa-feedback/@item.FeedbackId">Xóa</a>
+                                    }
+                                 }
+                    </div>
+            }
+        }
+    }
+    else
+    {
+        <h4 style="color: red; text-align: center">Không có bình luận !</h4>
+    }
+            </div>
+        </form>
+    </div>
+    <script>
+        var addButton = document.getElementById("add-comment");
 
+        // Thêm sự kiện "click" cho button
+        addButton.addEventListener("click", function () {
+            // Reload lại trang khi click vào button
+            location.reload();
+        });
     </script>
     <!-- ----- title------------- -->
     <div class="small-container">
-        <div class="" style="margin-top: 70px; margin-left: 16px">
+        <div class="" style="margin-top: 40px; margin-left: 16px">
             <h2 style="">Relate Products</h2>
             <p>View More</p>
         </div>

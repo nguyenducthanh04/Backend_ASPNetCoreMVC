@@ -7,6 +7,7 @@ namespace Website_Sport.Models
     {
         public Product()
         {
+            Feedbacks = new HashSet<Feedback>();
             Images = new HashSet<Image>();
             OrderDetails = new HashSet<OrderDetail>();
         }
@@ -23,6 +24,7 @@ namespace Website_Sport.Models
         public int CategoryId { get; set; }
 
         public virtual Category Category { get; set; } = null!;
+        public virtual ICollection<Feedback> Feedbacks { get; set; }
         public virtual ICollection<Image> Images { get; set; }
         public virtual ICollection<OrderDetail> OrderDetails { get; set; }
     }

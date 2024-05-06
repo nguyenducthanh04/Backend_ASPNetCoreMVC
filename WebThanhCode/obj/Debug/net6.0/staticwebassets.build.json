@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "v1ujbebtw3GiWPZF108F3RwSF04evU4O0hgGQSSU+U0=",
+  "Hash": "k/pyE/rDsC92ugHK294R/LF9YycXWqbMAVzRcKbd7ns=",
   "Source": "WebThanhCode",
   "BasePath": "_content/WebThanhCode",
   "Mode": "Default",
@@ -14365,6 +14365,23 @@
       "OriginalItemSpec": "wwwroot\\favicon.ico"
     },
     {
+      "Identity": "C:\\C#_CNTT_1605\\Website_Sport\\WebThanhCode\\wwwroot\\images\\akaza_57f4a512-c88a-47d4-91c3-7b893d35de88.jpg",
+      "SourceId": "WebThanhCode",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\C#_CNTT_1605\\Website_Sport\\WebThanhCode\\wwwroot\\",
+      "BasePath": "_content/WebThanhCode",
+      "RelativePath": "images/akaza_57f4a512-c88a-47d4-91c3-7b893d35de88.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\images\\akaza_57f4a512-c88a-47d4-91c3-7b893d35de88.jpg"
+    },
+    {
       "Identity": "C:\\C#_CNTT_1605\\Website_Sport\\WebThanhCode\\wwwroot\\images\\akaza_793964c4-4c1f-4aea-9f4b-3738f7cd0c1e.jpg",
       "SourceId": "WebThanhCode",
       "SourceType": "Discovered",
@@ -14380,6 +14397,23 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\images\\akaza_793964c4-4c1f-4aea-9f4b-3738f7cd0c1e.jpg"
+    },
+    {
+      "Identity": "C:\\C#_CNTT_1605\\Website_Sport\\WebThanhCode\\wwwroot\\images\\akaza_8a57e253-dc61-4be5-8a51-8363370e26d9.jpg",
+      "SourceId": "WebThanhCode",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\C#_CNTT_1605\\Website_Sport\\WebThanhCode\\wwwroot\\",
+      "BasePath": "_content/WebThanhCode",
+      "RelativePath": "images/akaza_8a57e253-dc61-4be5-8a51-8363370e26d9.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\images\\akaza_8a57e253-dc61-4be5-8a51-8363370e26d9.jpg"
     },
     {
       "Identity": "C:\\C#_CNTT_1605\\Website_Sport\\WebThanhCode\\wwwroot\\images\\akaza_a37ee875-e6b7-40a9-9fb2-3fa8332ce8bc.jpg",
@@ -14433,6 +14467,23 @@
       "OriginalItemSpec": "wwwroot\\images\\akaza_beda7906-55a2-4093-9a00-44aa6031467c.jpg"
     },
     {
+      "Identity": "C:\\C#_CNTT_1605\\Website_Sport\\WebThanhCode\\wwwroot\\images\\akaza_d645e4a1-d7e0-4fc5-8e34-96a3ec317564.jpg",
+      "SourceId": "WebThanhCode",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\C#_CNTT_1605\\Website_Sport\\WebThanhCode\\wwwroot\\",
+      "BasePath": "_content/WebThanhCode",
+      "RelativePath": "images/akaza_d645e4a1-d7e0-4fc5-8e34-96a3ec317564.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\images\\akaza_d645e4a1-d7e0-4fc5-8e34-96a3ec317564.jpg"
+    },
+    {
       "Identity": "C:\\C#_CNTT_1605\\Website_Sport\\WebThanhCode\\wwwroot\\images\\akaza_eb143543-eba5-4c97-b239-333afc3fe197.jpg",
       "SourceId": "WebThanhCode",
       "SourceType": "Discovered",
@@ -14467,6 +14518,23 @@
       "OriginalItemSpec": "wwwroot\\images\\Ảnh chụp màn hình (307)_1048a795-bcd8-4a37-b8a5-24f387b390fd.png"
     },
     {
+      "Identity": "C:\\C#_CNTT_1605\\Website_Sport\\WebThanhCode\\wwwroot\\images\\Ảnh chụp màn hình (307)_49d729ba-b366-4f95-9ae7-1e07d9b882ac.png",
+      "SourceId": "WebThanhCode",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\C#_CNTT_1605\\Website_Sport\\WebThanhCode\\wwwroot\\",
+      "BasePath": "_content/WebThanhCode",
+      "RelativePath": "images/Ảnh chụp màn hình (307)_49d729ba-b366-4f95-9ae7-1e07d9b882ac.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\images\\Ảnh chụp màn hình (307)_49d729ba-b366-4f95-9ae7-1e07d9b882ac.png"
+    },
+    {
       "Identity": "C:\\C#_CNTT_1605\\Website_Sport\\WebThanhCode\\wwwroot\\images\\Ảnh chụp màn hình (307)_6ab47b0c-92b8-40d1-a00c-986b3e10c485.png",
       "SourceId": "WebThanhCode",
       "SourceType": "Discovered",
@@ -14482,6 +14550,23 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\images\\Ảnh chụp màn hình (307)_6ab47b0c-92b8-40d1-a00c-986b3e10c485.png"
+    },
+    {
+      "Identity": "C:\\C#_CNTT_1605\\Website_Sport\\WebThanhCode\\wwwroot\\images\\Ảnh chụp màn hình (307)_95c1f225-3918-47e7-9164-c219edea35cf.png",
+      "SourceId": "WebThanhCode",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\C#_CNTT_1605\\Website_Sport\\WebThanhCode\\wwwroot\\",
+      "BasePath": "_content/WebThanhCode",
+      "RelativePath": "images/Ảnh chụp màn hình (307)_95c1f225-3918-47e7-9164-c219edea35cf.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\images\\Ảnh chụp màn hình (307)_95c1f225-3918-47e7-9164-c219edea35cf.png"
     },
     {
       "Identity": "C:\\C#_CNTT_1605\\Website_Sport\\WebThanhCode\\wwwroot\\images\\Ảnh chụp màn hình (307)_c6616808-ce38-40b0-ab30-5779e56624c7.png",

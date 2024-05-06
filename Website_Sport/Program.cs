@@ -96,4 +96,9 @@ app.MapControllerRoute(
     pattern: "doi-thongtin",
     defaults: new { Controller = "Access", action = "ChangeInfo" }
     );
+app.MapControllerRoute(
+    name: "xoa-feedback",
+    pattern: "xoa-feedback/{id?}",
+    defaults: new { Controller = "Product", action = "DeleteFeeback" }
+    );
 app.Run();

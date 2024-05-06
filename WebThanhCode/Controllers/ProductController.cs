@@ -75,6 +75,33 @@ namespace WebThanhCode.Controllers
             context.SaveChanges();
             return RedirectToAction("Index");
         }
+        //[HttpPost]
+        //public ActionResult AddImage(IEnumerable<IFormFile> images)
+        //{
+        //    foreach (var imageFile in images)
+        //    {
+        //        string fileName = Path.GetFileNameWithoutExtension(imageFile.FileName);
+        //        string extension = Path.GetExtension(imageFile.FileName);
+        //        string uniqueFileName = fileName + "_" + Guid.NewGuid().ToString() + extension;
+        //        string uploadsFolder = Path.Combine(_env.WebRootPath, "images");
+        //        string filePath = Path.Combine(uploadsFolder, uniqueFileName);
+
+        //        using (var fileStream = new FileStream(filePath, FileMode.Create))
+        //        {
+        //            imageFile.CopyTo(fileStream);
+        //        }
+
+        //        var image = new Image
+        //        {
+        //            Image1 = "/images/" + uniqueFileName
+        //        };
+
+        //        context.Images.Add(image);
+        //    }
+
+        //    context.SaveChanges();
+        //    return RedirectToAction("Index");
+        //}
         [HttpGet]
         public ActionResult AddRelatedPhoto(int id)
         {

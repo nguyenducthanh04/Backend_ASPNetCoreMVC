@@ -47,6 +47,11 @@ namespace WebThanhCode.Models
 
                 entity.Property(e => e.CreatedAt).HasColumnType("datetime");
 
+                entity.HasOne(d => d.Product)
+                    .WithMany(p => p.Feedbacks)
+                    .HasForeignKey(d => d.ProductId)
+                    .HasConstraintName("FK_FeedBack_Products");
+
                 entity.HasOne(d => d.User)
                     .WithMany(p => p.Feedbacks)
                     .HasForeignKey(d => d.UserId)

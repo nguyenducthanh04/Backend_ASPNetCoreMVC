@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations.Schema;
 
 namespace WebThanhCode.Models
 {
@@ -10,7 +11,11 @@ namespace WebThanhCode.Models
         public int UserId { get; set; }
         public DateTime? CreatedAt { get; set; }
         public string? Image { get; set; }
+        public int ProductId { get; set; }
 
+        public virtual Product Product { get; set; } = null!;
         public virtual User User { get; set; } = null!;
+        [NotMapped]
+        public IFormFile ImageFile { get; set; } = null!;
     }
 }
